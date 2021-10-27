@@ -2,47 +2,115 @@
 @model Web_Project_CeA.Pages.Produtos.EditModel
 @{
 }
-<h2> Editar Produto (PUT) </h2>
-<hr>
 
-<form method="post">
-    <!--Fomulário com método post-->
-
-    <input type="text" asp-for="Produto.Id"> <!-- campo  oculto com a informação de ID do produto-->
-    <!--insere os campos dando como valores os dados do objeto Produto que se oriunda da API -->
-    <p><label asp-for="Produto.nome">Nome </label></p>
-    <p><input asp-for="Produto.nome"></p>
-
-    <p><label asp-for="Produto.tamanho">Tamanho</label></p>
-    <p><input asp-for="Produto.tamanho"></p>
-
-    <p><label asp-for="Produto.categoria">Categoria</label></p>
-    <p><input asp-for="Produto.categoria"></p>
-
-    <p><label asp-for="Produto.divisao">Divisão</label></p>
-    <p><input asp-for="Produto.divisao"></p>
-
-    <p><label asp-for="Produto.descricao">Descrição</label></p>
-    <p><input asp-for="Produto.descricao"></p>
-
-    <p><label asp-for="Produto.estoque">Estoque</label></p>
-    <p><input asp-for="Produto.estoque"></p>
-
-    <p><label asp-for="Produto.fornecedor">Fornecedor</label></p>
-    <p><input asp-for="Produto.fornecedor"></p>
-
-    <p><label asp-for="Produto.imagem">Link da Foto do Produto</label></p>
-    <p><input asp-for="Produto.imagem"></p>
-
-    <p><label asp-for="Produto.usuario_alt">Usuário da Alteração</label></p>
-    <p><input asp-for="Produto.usuario_alt"></p>
-
-    <div class="row">
-        <div class="form-group">
-            <input type="submit" value="Salvar" class="btn btn-outline-primary" />
-            <input type="button" class="btn btn-outline-primary" value="Voltar" onClick="history.go(-1)">
-
-        </div>
+<main>
+    <div class="breadcrumb">
+        <a href="../../index.html"><span>Home</span></a>
+        <span>>></span>
+        <a href="../detalhe-produto/"><span>Detalhe do produto</span></a>
+        <span>>></span>
+        <span>Editar produto</span>
     </div>
+    <section class="container-produto">
+        <div class="produto-info">
+            <div class="img-produto">
+                <img src="../../img/foto.jpeg" alt="Blusa manga curta esportiva poliamida ace">
+                <div class="input-nova-img">
+                    <label for="imagem">Alterar foto do produto</label>
+                    <input type="text" name="imagem" id="imagem" placeholder="URL da imagem">
+                </div>
+                <div class="btn-details editar">
+                    <a href="../detalhe-produto/" class="btn secondary">salvar alterações</a>
+                </div>
+            </div>
+            <div class="produto">
+                <div class="produto-details">
+                    <h3>blusa cropped com amarração manga bufante decote redondo vermelho</h3>
+                    <textarea name="" id="produto-descricao" rows="5">Blusa feminina confeccionada em malha leve de poliamida. O modelo tem comprimento curto e caimento levemente ajustado. As mangas são curtas. O decote é redondo. Possui aplicação frontal com o logo da marca.</textarea>
+                </div>
+                <div class="departamento-categoria">
+                    <div class="departamento-info">
+                        <label for="departamento">Departamento</label>
+                        <select name="departamento" id="departamento">
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="infantil">Infantil</option>
+                            <option value="plus-size">Plus Size</option>
+                        </select>
+                    </div>
+                    <div class="categoria-info">
+                        <label for="categoria">Categoria</label>
+                        <select name="categoria" id="categoria">
+                            <option value="top">Top</option>
+                            <option value="bottom">Bottom</option>
+                            <option value="inteiro">Inteiro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="estoque">
+                    <h3>estoque</h3>
+                    <div class="container-estoque">
+                        <div class="container-tamanhos">
+                            <label for="tamanhos">Tamanhos</label>
+                            <input class="input-estoque" type="text" name="tamanhos" placeholder="PP">
+                            <input class="input-estoque" type="text" name="tamanhos" placeholder="P">
+                            <input class="input-estoque" type="text" name="tamanhos" placeholder="M">
+                            <input class="input-estoque" type="text" name="tamanhos" placeholder="G">
+                            <input class="input-estoque" type="text" name="tamanhos" placeholder="GG">
+                            <input class="input-estoque" type="text" name="tamanhos" placeholder="XG">
+                        </div>
+                        <div class="container-quantidade">
+                            <label for="quantidade">Quantidade</label>
+                            <input class="input-estoque" type="text" name="quantidade">
+                            <input class="input-estoque" type="text" name="quantidade">
+                            <input class="input-estoque" type="text" name="quantidade">
+                            <input class="input-estoque" type="text" name="quantidade">
+                            <input class="input-estoque" type="text" name="quantidade">
+                            <input class="input-estoque" type="text" name="quantidade">
+                        </div>
+                    </div>
+                </div>
 
-</form>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="movimentacoes">
+            <h3>histórico de movimentações</h3>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Data/hora</th>
+                        <th>Usuário</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input class="input-table" type="text" placeholder="2021-11-20">
+                        </td>
+                        <td>
+                            <select class="input-table" name="usuario" id="usuario-td">
+                                <option value="top">Beatriz Medina</option>
+                                <option value="bottom">Bruno Lopes</option>
+                                <option value="inteiro">David Oliveira</option>
+                                <option value="inteiro">Gustavo Watanabe</option>
+                                <option value="inteiro">Neilyane Silva</option>
+                                <option value="inteiro">Thiago Vieira</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="input-table" type="text" placeholder="1200">
+                        </td>
+                        <td>
+                            <input class="input-table" type="text" placeholder="-">
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+</main>

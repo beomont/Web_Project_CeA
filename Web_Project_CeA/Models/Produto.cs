@@ -7,7 +7,7 @@ namespace Web_Project_CeA.Models
 {
     public class Produto
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string nome { get; set; }
         public string tamanho { get; set; }
         public string categoria { get; set; }
@@ -16,7 +16,7 @@ namespace Web_Project_CeA.Models
         public int estoque { get; set; }
         public string fornecedor { get; set; }
         public string imagem { get; set; }
-        public string usuario_Alteracao { get; set; }
-        public string reg_Alteracao { get; set; }
+        public string usuario_alt { get; set; }
+        public DateTime reg_alt { get; set; }
     }
 }

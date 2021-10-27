@@ -15,7 +15,7 @@ namespace Web_Project_CeA.Pages.Produtos
     {
         [BindProperty]
         public Produto Produto { get; set; }
-        string baseUrl = "https://localhost:44343/";
+        string baseUrl = "https://localhost:44329/";
         public async Task<IActionResult> OnGetAsyn(int? id)
         {
             if (id == null)
@@ -50,7 +50,7 @@ namespace Web_Project_CeA.Pages.Produtos
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("applicaton/json"));
                 HttpResponseMessage response = await client
-                    .PutAsJsonAsync("api/Produtos/" + Produto.ID, Produto);
+                    .PutAsJsonAsync("api/Produtos/" + Produto.Id, Produto);
                 if (response.IsSuccessStatusCode)
                 {
                     return RedirectToPage("./index");

@@ -17,6 +17,6 @@ namespace Web_Project_CeA.Models
         public string fornecedor { get; set; }
         public string imagem { get; set; }
         public string usuario_alt { get; set; }
-        public DateTime reg_alt { get; set; }
+        public DateTime reg_alt { get; set; } = DateTime.Now;
     }
 }

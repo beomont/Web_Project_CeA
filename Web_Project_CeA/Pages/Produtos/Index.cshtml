@@ -2,8 +2,12 @@
 @model Web_Project_CeA.Pages.Produtos.IndexModel
 @{
 }
-<h1>Lista de Produtos (GET) </h1>
 
+
+<a class="btn btn-outline-primary align-content-center" asp-page="/Produtos/Create"><b>Novo Produto</b></a> <!-- insere botão que chama uma página -->
+<hr>
+<h2><b>Lista de Produtos (GET) </b></h2>
+<hr>
 @foreach (var data in Model.Produtos)
 {
 
@@ -19,6 +23,6 @@
     <p>Foto do Produto: <img src="@Html.DisplayFor(modelItem => data.imagem)"></p>
     <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.usuario_alt)</p>
     <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.reg_alt)</p>
-    <hr/>
+    <hr />
 
 }

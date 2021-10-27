@@ -3,3 +3,102 @@
 @{
 }
 
+<h2 class="text-center"> Adicionar Produto (Post) </h2>
+<hr>
+
+<!--Cria o fomulário com método POST onde serão inseridos os dados pelo usuário-->
+<form method="post">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Produto </label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Tipo" class="control-label">Tamanho</label>
+                <select class="form-control" id="tamanho" name="tamanho" required>
+                    <option>PP </option>
+                    <option>P</option>
+                    <option>M</option>
+                    <option>G</option>
+                    <option>GG</option>
+                    <option>XG</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Poderes" class="control-label">Categoria</label>
+                <select class="form-control" id="categoria" name="categoria" required>
+                    <option>Bottom </option>
+                    <option>Top</option>
+                    <option>Inteiro</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Imagem" class="control-label">Divisão</label>
+                <select class="form-control" id="divisao" name="divisao" required>
+                    <option>Adulto Masc </option>
+                    <option>Adulto Fem</option>
+                    <option>Infantil Fem</option>
+                    <option>Infantil Masc</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Descrição </label>
+                <textarea class="form-control" id="descricao" name="descricao" required> </textarea>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Estoque </label>
+                <input type="text" class="form-control" id="estoque" name="estoque" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Fornecedor </label>
+                <input type="text" class="form-control" id="fornecedor" name="fornecedor" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Link da Foto do Produto</label>
+                <input type="text" class="form-control" id="imagem" name="imagem" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Usuário da Alteração</label>
+                <select class="form-control" id="usuario_alt" name="usuario_alt" required>
+                    <option>Bruno</option>
+                    <option>Beatriz</option>
+                    <option>David</option>
+                    <option>Gustavo</option>
+                    <option>Neilyane</option>
+                    <option>Thiago</option>
+                </select>
+            </div>
+        </div>
+
+     
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="submit" value="Cadastrar" class="btn btn-outline-primary" /> <!--insere botão submit para enviar os dados dos campos do fomulário via método POST-->
+            <input type="button" class="btn btn-outline-primary" value="Voltar" onClick="history.go(-1)">
+        </div>
+
+    </div>
+
+
+</form>

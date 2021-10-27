@@ -2,3 +2,47 @@
 @model Web_Project_CeA.Pages.Produtos.EditModel
 @{
 }
+<h2> Editar Produto (PUT) </h2>
+<hr>
+
+<form method="post">
+    <!--Fomulário com método post-->
+
+    <input type="text" asp-for="Produto.Id"> <!-- campo  oculto com a informação de ID do produto-->
+    <!--insere os campos dando como valores os dados do objeto Produto que se oriunda da API -->
+    <p><label asp-for="Produto.nome">Nome </label></p>
+    <p><input asp-for="Produto.nome"></p>
+
+    <p><label asp-for="Produto.tamanho">Tamanho</label></p>
+    <p><input asp-for="Produto.tamanho"></p>
+
+    <p><label asp-for="Produto.categoria">Categoria</label></p>
+    <p><input asp-for="Produto.categoria"></p>
+
+    <p><label asp-for="Produto.divisao">Divisão</label></p>
+    <p><input asp-for="Produto.divisao"></p>
+
+    <p><label asp-for="Produto.descricao">Descrição</label></p>
+    <p><input asp-for="Produto.descricao"></p>
+
+    <p><label asp-for="Produto.estoque">Estoque</label></p>
+    <p><input asp-for="Produto.estoque"></p>
+
+    <p><label asp-for="Produto.fornecedor">Fornecedor</label></p>
+    <p><input asp-for="Produto.fornecedor"></p>
+
+    <p><label asp-for="Produto.imagem">Link da Foto do Produto</label></p>
+    <p><input asp-for="Produto.imagem"></p>
+
+    <p><label asp-for="Produto.usuario_alt">Usuário da Alteração</label></p>
+    <p><input asp-for="Produto.usuario_alt"></p>
+
+    <div class="row">
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn btn-outline-primary" />
+            <input type="button" class="btn btn-outline-primary" value="Voltar" onClick="history.go(-1)">
+
+        </div>
+    </div>
+
+</form>

@@ -29,7 +29,7 @@ namespace Web_Project_CeA.Pages.Produtos
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response = await client.GetAsync("api/Pokemons/" + id);
+                HttpResponseMessage response = await client.GetAsync("api/Produtos/" + id);
 
                 if (response.IsSuccessStatusCode)
                 {

@@ -2,7 +2,7 @@
 @model Web_Project_CeA.Pages.Produtos.IndexModel
 @{
 }
-<h1>Produto</h1>
+<h1>Lista de Produtos (GET) </h1>
 
 @foreach (var data in Model.Produtos)
 {
@@ -16,7 +16,7 @@
     <p>Desccrição: @Html.DisplayFor(modelItem => data.descricao)</p>
     <p>Estoque: @Html.DisplayFor(modelItem => data.estoque)</p>
     <p>Fornecedor: @Html.DisplayFor(modelItem => data.fornecedor)</p>
-    <img src="@Html.DisplayFor(modelItem => data.imagem)">
+    <p>Foto do Produto: <img src="@Html.DisplayFor(modelItem => data.imagem)"></p>
     <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.usuario_alt)</p>
     <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.reg_alt)</p>
     <hr/>

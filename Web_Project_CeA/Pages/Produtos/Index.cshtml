@@ -17,12 +17,13 @@
     <p>Tamanho: @Html.DisplayFor(modelItem => data.tamanho)</p>
     <p>Categoria: @Html.DisplayFor(modelItem => data.categoria)</p>
     <p>Divisão: @Html.DisplayFor(modelItem => data.divisao)</p>
-    <p>Desccrição: @Html.DisplayFor(modelItem => data.descricao)</p>
+    <p>Descrição: @Html.DisplayFor(modelItem => data.descricao)</p>
     <p>Estoque: @Html.DisplayFor(modelItem => data.estoque)</p>
     <p>Fornecedor: @Html.DisplayFor(modelItem => data.fornecedor)</p>
     <p>Foto do Produto: <img src="@Html.DisplayFor(modelItem => data.imagem)"></p>
     <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.usuario_alt)</p>
     <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.reg_alt)</p>
+    <p><a class="btn btn-outline-primary" asp-page="/Produtos/Detail" asp-route-id="@data.Id"><b> Ver </b></a></p>
     <hr />
 
 }

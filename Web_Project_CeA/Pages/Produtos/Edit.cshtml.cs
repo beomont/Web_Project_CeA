@@ -16,7 +16,7 @@ namespace Web_Project_CeA.Pages.Produtos
         [BindProperty]
         public Produto Produto { get; set; }
         string baseUrl = "https://localhost:44329/";
-        public async Task<IActionResult> OnGetAsyn(int? id)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {

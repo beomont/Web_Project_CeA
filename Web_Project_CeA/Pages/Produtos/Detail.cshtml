@@ -2,3 +2,87 @@
 @model Web_Project_CeA.Pages.Produtos.DetailModel
 @{
 }
+
+<main>
+    <div class="breadcrumb">
+        <a href="../../index.html"><span>Home</span></a>
+        <span>>></span>
+        <span>Detalhe produto</span>
+    </div>
+    <section class="container-produto">
+        <div class="produto-info">
+            <div class="img-produto">
+                <img src="../../img/foto.jpeg" alt="Blusa manga curta esportiva poliamida ace">
+                <div class="btn-details">
+                    <a href="../editar-produto/" class="btn secondary">editar produto</a>
+                    <a href="../excluir-produto" class="btn danger">excluir produto</a>
+                </div>
+            </div>
+            <div class="produto">
+                <div class="produto-details">
+                    <h3>blusa cropped com amarração manga bufante decote redondo vermelho</h3>
+                    <p>Blusa feminina confeccionada em malha leve de poliamida. O modelo tem comprimento curto e caimento levemente ajustado. As mangas são curtas. O decote é redondo. Possui aplicação frontal com o logo da marca.</p>
+                </div>
+
+                <div class="departamento-categoria">
+                    <div class="detalhe-departamento-info">
+                        <h4>Departamento</h4>
+                        <p>Feminino</p>
+                    </div>
+                    <div class="detalhe-categoria-info">
+                        <h4>Categoria</h4>
+                        <p>Top</p>
+                    </div>
+                </div>
+
+
+                <div class="estoque">
+                    <h3>estoque</h3>
+                    <div class="detalhe-container-estoque">
+                        <div class="detalhe-container-tamanhos">
+                            <h4>Tamanhos</h4>
+                            <p>PP</p>
+                        </div>
+                        <div class="detalhe-container-quantidade">
+                            <h4>Quantidades</h4>
+                            <p>1200</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="movimentacoes">
+            <h3>histórico de movimentações</h3>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Data/hora</th>
+                        <th>Usuário</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>2021-11-20</span>
+                        </td>
+                        <td>
+                            <span>Beatriz Medina</span>
+                        </td>
+                        <td>
+                            <span>1200</span>
+                        </td>
+                        <td>
+                            <span>--</span>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+</main>

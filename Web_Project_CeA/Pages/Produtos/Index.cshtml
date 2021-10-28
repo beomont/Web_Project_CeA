@@ -4,26 +4,56 @@
 }
 
 
-<a class="btn btn-outline-primary align-content-center" asp-page="/Produtos/Create"><b>Novo Produto</b></a> <!-- insere botão que chama uma página -->
-<hr>
-<h2><b>Lista de Produtos (GET) </b></h2>
-<hr>
-@foreach (var data in Model.Produtos)
-{
+<main class="container">
+    <div class="container-info">
+        <div class="container-title">
+            <div class="breadcrumb">
+                <a asp-page="/Produtos"><span>Home</span></a>   
+            </div>
+            <h1>Estoque geral</h1>
+        </div>
+        <a class="btn CTA" asp-page="/Produtos/Create">Adicionar produto</a>
+    </div>
+    <div class="table-title">
+        <div>
+            <div class="col20">Imagem</div>
+            <div class="col80">Produto</div>
+        </div>
+        <div>
+            <div class="col25">Divisão</div>
+            <div class="col25">Categoria</div>
+            <div class="col25">Quantidade</div>
+        </div>
+    </div>
 
 
-    <p>Código Produto: @Html.DisplayFor(modelItem => data.Id)</p>
-    <p>Nome: @Html.DisplayFor(modelItem => data.nome)</p>
-    <p>Tamanho: @Html.DisplayFor(modelItem => data.tamanho)</p>
-    <p>Categoria: @Html.DisplayFor(modelItem => data.categoria)</p>
-    <p>Divisão: @Html.DisplayFor(modelItem => data.divisao)</p>
-    <p>Descrição: @Html.DisplayFor(modelItem => data.descricao)</p>
-    <p>Estoque: @Html.DisplayFor(modelItem => data.estoque)</p>
-    <p>Fornecedor: @Html.DisplayFor(modelItem => data.fornecedor)</p>
-    <p>Foto do Produto: <img src="@Html.DisplayFor(modelItem => data.imagem)"></p>
-    <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.usuario_alt)</p>
-    <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.reg_alt)</p>
-    <p><a class="btn btn-outline-primary" asp-page="/Produtos/Detail" asp-route-id="@data.Id"><b> Ver </b></a></p>
-    <hr />
+    @foreach (var data in Model.Produtos)
+    {
+        @* <p>Código Produto: @Html.DisplayFor(modelItem => data.Id)</p> *@
+        @* <p>Tamanho: @Html.DisplayFor(modelItem => data.tamanho)</p> *@
+        @* <p>Descrição: @Html.DisplayFor(modelItem => data.descricao)</p> *@
+        @* <p>Fornecedor: @Html.DisplayFor(modelItem => data.fornecedor)</p> *@
+        @* <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.usuario_alt)</p> *@
+        @* <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.reg_alt)</p> *@
 
-}
+        <div class="container-card">
+        <div>
+            <div class="col20">
+                <img src="@Html.DisplayFor(modelItem => data.imagem)" class="card-image" alt="foto do produto"/>
+            </div>
+            <div class="col80">
+                <p>@Html.DisplayFor(modelItem => data.nome)</p>
+            </div>
+        </div>
+        <div>
+            <div class="col25">@Html.DisplayFor(modelItem => data.divisao)</div>
+            <div class="col25">@Html.DisplayFor(modelItem => data.categoria)</div>
+            <div class="col25">@Html.DisplayFor(modelItem => data.estoque)</div>
+            <div class="col25 details">
+                <a class="btn details" asp-page="/Produtos/Detail" asp-route-id="@data.Id">Detalhes</a>
+            </div>
+        </div>        
+        </div>
+    }
+        
+</main>

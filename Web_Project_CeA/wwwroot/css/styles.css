@@ -214,7 +214,8 @@ textarea {
 
 /* INPUTS */
 input,
-select {
+select,
+textarea {
     background: var(--SNOW-LIGHT);
     border: 1px solid var(--SNOW);
     border-radius: 4px;

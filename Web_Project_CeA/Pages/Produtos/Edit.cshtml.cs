@@ -15,8 +15,8 @@ namespace Web_Project_CeA.Pages.Produtos
     {
         [BindProperty]
         public Produto Produto { get; set; }
-        string baseUrl = "https://localhost:44336/";
-        public async Task<IActionResult> OnGetAsyn(int? id)
+        string baseUrl = "https://localhost:44329/";
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
             {
@@ -29,7 +29,7 @@ namespace Web_Project_CeA.Pages.Produtos
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response = await client.GetAsync("api/Pokemons/" + id);
+                HttpResponseMessage response = await client.GetAsync("api/Produtos/" + id);
 
                 if (response.IsSuccessStatusCode)
                 {

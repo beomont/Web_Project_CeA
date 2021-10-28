@@ -2,3 +2,38 @@
 @model Web_Project_CeA.Pages.Produtos.DetailModel
 @{
 }
+
+<h2><b> Consulta de Produto único (GET ÚNICO) </b></h2>
+<div class="row">
+    <div class="col-md-12">
+        <h1 > @Html.DisplayFor(modelItem => Model.Produto.nome)</h1>
+        <img src="@Html.DisplayFor(modelItem => Model.Produto.imagem)">
+
+        <br>
+
+        
+        <div class="info">
+
+            <p>Código Produto: @Html.DisplayFor(modelItem => Model.Produto.Id)</p>
+            <p>Tamanho: @Html.DisplayFor(modelItem => Model.Produto.tamanho)</p>
+            <p>Categoria: @Html.DisplayFor(modelItem => Model.Produto.categoria)</p>
+            <p>Divisão: @Html.DisplayFor(modelItem => Model.Produto.divisao)</p>
+            <p>Descrição: @Html.DisplayFor(modelItem => Model.Produto.descricao)</p>
+            <p>Estoque: @Html.DisplayFor(modelItem => Model.Produto.estoque)</p>
+            <p>Fornecedor: @Html.DisplayFor(modelItem => Model.Produto.fornecedor)</p>
+            <p>Usuário de Alteração: @Html.DisplayFor(modelItem => Model.Produto.usuario_alt)</p>
+            <p>Registro de Alteração: @Html.DisplayFor(modelItem => Model.Produto.reg_alt)</p>
+        </div>
+
+
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-outline-primary" asp-page="/Produtos/Edit" asp-route-id="@Model.Produto.Id">Editar</a> <!-- botão que chama a página e envia o ID do pokemon-->
+    </div>
+    <div class="col-md-3">
+        <a class="btn btn-outline-danger" asp-page="/Produtos/Delete" asp-route-id="@Model.Produto.Id">Apagar</a><!-- botão que chama a página e envia o ID do pokemon-->
+    </div>
+    <div class="col-md-3">
+        <input type="button" class="btn btn-outline-primary" value="Voltar" onClick="history.go(-1)">
+    </div>
+</div>

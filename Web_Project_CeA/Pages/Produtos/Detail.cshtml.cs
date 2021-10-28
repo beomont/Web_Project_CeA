@@ -14,7 +14,7 @@ namespace Web_Project_CeA.Pages.Produtos
     public class DetailModel : PageModel
     {
         public Produto Produto { get; set; }
-        string baseUrl = "ttps://localhost:44343/";
+        string baseUrl = "https://localhost:44329/";
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)

@@ -4,17 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using Newtonsoft.Json;
-using Web_Project_CeA.Models;
+using Web_Project_CeA.Models; // adicionado dependencia
+using System.Net.Http; // adicionado dependencia
+using System.Net.Http.Headers; // adicionado dependencia
+using Newtonsoft.Json; // adicionado dependencia
 
 namespace Web_Project_CeA.Pages.Produtos
 {
     public class IndexModel : PageModel
     {
         public List<Produto> Produtos { get; private set; } = new List<Produto>();
-        string baseUrl = "https://localhost:44343/";
+        string baseUrl = "https://localhost:44329/";
         public async Task OnGetAsync()
         {
             using (var client = new HttpClient())
@@ -32,12 +32,6 @@ namespace Web_Project_CeA.Pages.Produtos
                 }
 
             }
-
         }
-
-
-
-
-
     }
 }

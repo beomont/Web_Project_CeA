@@ -17,7 +17,7 @@ namespace Web_Project_CeA.Pages.Produtos
         [BindProperty]
 
         public Produto Produto { get; set; }
-        string baseUrl = "https://localhost:44343/";
+        string baseUrl = "https://localhost:44329/";
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -54,7 +54,7 @@ namespace Web_Project_CeA.Pages.Produtos
                 return NotFound();
             }
 
-            if (Produto.ID != id)
+            if (Produto.Id != id)
             {
                 return BadRequest();
             }
@@ -67,7 +67,7 @@ namespace Web_Project_CeA.Pages.Produtos
                     new MediaTypeWithQualityHeaderValue("application/json"));
 
                 HttpResponseMessage response = await client
-                    .DeleteAsync("api/Produtos/" + Produto.ID);
+                    .DeleteAsync("api/Produtos/" + Produto.Id);
                 if (response.IsSuccessStatusCode)
                 {
                     return RedirectToPage("./Index");

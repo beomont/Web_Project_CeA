@@ -12,16 +12,16 @@
     <section class="container-produto">
         <div class="produto-info">
             <div class="img-produto">
-                <img src="../../img/foto.jpeg" alt="Blusa manga curta esportiva poliamida ace">
+                <img src="@Html.DisplayFor(model=> Model.Produto.imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.nome)">
                 <div class="btn-details">
-                    <a href="../editar-produto/" class="btn secondary">editar produto</a>
-                    <a href="../excluir-produto" class="btn danger">excluir produto</a>
+                    <a asp-page="/Produtos/Edit" asp-route-id="@Model.Produto.Id" class="btn secondary">editar produto</a>
+                    <a asp-page="/Produtos/Delete" asp-route-id="@Model.Produto.Id" class="btn danger">excluir produto</a>
                 </div>
             </div>
             <div class="produto">
                 <div class="produto-details">
-                    <h3>blusa cropped com amarração manga bufante decote redondo vermelho</h3>
-                    <p>Blusa feminina confeccionada em malha leve de poliamida. O modelo tem comprimento curto e caimento levemente ajustado. As mangas são curtas. O decote é redondo. Possui aplicação frontal com o logo da marca.</p>
+                    <h3>@Html.DisplayFor(model => Model.Produto.nome)</h3>
+                    <p>@Html.DisplayFor(model => Model.Produto.descricao)</p>
                 </div>
 
                 <div class="departamento-categoria">

@@ -1,4 +1,100 @@
 ﻿@page
 @model Web_Project_CeA.Pages.Produtos.CreateModel
 @{
+    ViewData["Title"] = "Adicionar produto";
 }
+
+<main>
+        <div class="breadcrumb">
+            <a href="../../index.html"><span>Home</span></a>
+            <span>>></span>
+            <span>Adicionar produto</span>
+        </div>
+        <form method="post">
+
+            <section class="container-produto">
+                <div class="produto-info">
+                    <div class="img-produto">
+                        <div class="img-area">
+                            <label for="imagem">Foto do produto</label>
+                            <input type="text" id="imagem" name="imagem"  placeholder="URL da imagem" required>
+                        </div>
+                        <div class="btn-details">
+                            <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
+                            <input type="submit" value="salvar alterações" class="btn CTA" /> <!--insere botão submit para enviar os dados dos campos do fomulário via método POST-->
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="produto-details">
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="nome do produto" required>     
+                            <textarea name="descricao" id="produto-descricao" rows="5" placeholder="descrição do produto, até 240 caracteres" ></textarea>
+                        </div>
+                        <div class="departamento-categoria">
+                            <div class="departamento-info">
+                                <label for="divisao">Departamento</label>
+                                <select class="form-control" id="divisao" name="divisao" required>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="infantil">Infantil</option>
+                                    <option value="plus-size">Plus Size</option>
+                                </select>
+                            </div>
+                            <div class="categoria-info">
+                                <label for="categoria">Categoria</label>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="top">Top</option>
+                                    <option value="bottom">Bottom</option>
+                                    <option value="inteiro">Inteiro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="estoque">
+                            <h3>estoque</h3>
+                            <div class="container-estoque">
+                                <div class="container-tamanhos">
+                                    <label for="tamanho">Tamanhos</label>
+                                    <select id="tamanho" name="tamanho" required>
+                                        <option>PP </option>
+                                        <option>P</option>
+                                        <option>M</option>
+                                        <option>G</option>
+                                        <option>GG</option>
+                                        <option>XG</option>
+                                    </select>
+                                </div>
+                                <div class="container-quantidade">
+                                    <label for="estoque">Quantidade</label>
+                                    <input class="input-estoque" type="text" name="estoque">  
+                                </div>
+                            </div>
+                            <div class="container-estoque">
+                                 <div class="container-tamanhos">
+                                    <label for="fornecedor"> Fornecedor </label>
+                                    <input type="text" id="fornecedor" name="fornecedor" required>
+                                </div>
+                                <div class="container-quantidade">
+                                    <label for="usuario_alt"> Usuário da Alteração</label>
+                                    <select id="usuario_alt" name="usuario_alt" required>
+                                        <option>Bruno</option>
+                                        <option>Beatriz</option>
+                                        <option>David</option>
+                                        <option>Gustavo</option>
+                                        <option>Neilyane</option>
+                                        <option>Thiago</option>
+                                    </select>  
+                                </div>
+                            </div>
+
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </form>
+            <section>
+                <div class="movimentacoes">
+                    
+                </div>
+            </section>
+    </main>

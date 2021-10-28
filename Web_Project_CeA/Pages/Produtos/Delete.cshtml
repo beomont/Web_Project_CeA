@@ -2,3 +2,17 @@
 @model Web_Project_CeA.Pages.Produtos.DeleteModel
 @{
 }
+    <h3> Você deseja realmente deletar o produto <b><font color="red"> @Html.DisplayFor(model => model.Produto.nome) </font></b> ?</h3>
+    <hr>
+
+    <form method="post">
+        <!-- insere formulário com o método post -->
+                  <input type="hidden" asp-for="Produto.Id"> <!-- insere um campo oculto para receber o ID do Pokemon -->
+            <div class="col-md-6">
+                <input type="Submit" value="Confimar" class="btn btn-outline-danger"> <!-- insere um botão SUBMIT para encaminhar os dados do form via POST-->
+            </div>
+            <div class="col-md-6">
+                <input type="button" class="btn btn-outline-primary" value="Cancelar" onClick="history.go(-1)">
+            </div>
+        
+    </form>

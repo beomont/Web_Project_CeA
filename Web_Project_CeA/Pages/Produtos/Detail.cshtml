@@ -3,37 +3,86 @@
 @{
 }
 
-<h2><b> Consulta de Produto único (GET ÚNICO) </b></h2>
-<div class="row">
-    <div class="col-md-12">
-        <h1 > @Html.DisplayFor(modelItem => Model.Produto.nome)</h1>
-        <img src="@Html.DisplayFor(modelItem => Model.Produto.imagem)">
+<main>
+    <div class="breadcrumb">
+        <a href="../../index.html"><span>Home</span></a>
+        <span>>></span>
+        <span>Detalhe produto</span>
+    </div>
+    <section class="container-produto">
+        <div class="produto-info">
+            <div class="img-produto">
+                <img src="@Html.DisplayFor(model=> Model.Produto.imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.nome)">
+                <div class="btn-details">
+                    <a asp-page="/Produtos/Edit" asp-route-id="@Model.Produto.Id" class="btn secondary">editar produto</a>
+                    <a asp-page="/Produtos/Delete" asp-route-id="@Model.Produto.Id" class="btn danger">excluir produto</a>
+                </div>
+            </div>
+            <div class="produto">
+                <div class="produto-details">
+                    <h3>@Html.DisplayFor(model => Model.Produto.nome)</h3>
+                    <p>@Html.DisplayFor(model => Model.Produto.descricao)</p>
+                </div>
 
-        <br>
+                <div class="departamento-categoria">
+                    <div class="detalhe-departamento-info">
+                        <h4>Departamento</h4>
+                        <p>Feminino</p>
+                    </div>
+                    <div class="detalhe-categoria-info">
+                        <h4>Categoria</h4>
+                        <p>Top</p>
+                    </div>
+                </div>
 
-        
-        <div class="info">
 
-            <p>Código Produto: @Html.DisplayFor(modelItem => Model.Produto.Id)</p>
-            <p>Tamanho: @Html.DisplayFor(modelItem => Model.Produto.tamanho)</p>
-            <p>Categoria: @Html.DisplayFor(modelItem => Model.Produto.categoria)</p>
-            <p>Divisão: @Html.DisplayFor(modelItem => Model.Produto.divisao)</p>
-            <p>Descrição: @Html.DisplayFor(modelItem => Model.Produto.descricao)</p>
-            <p>Estoque: @Html.DisplayFor(modelItem => Model.Produto.estoque)</p>
-            <p>Fornecedor: @Html.DisplayFor(modelItem => Model.Produto.fornecedor)</p>
-            <p>Usuário de Alteração: @Html.DisplayFor(modelItem => Model.Produto.usuario_alt)</p>
-            <p>Registro de Alteração: @Html.DisplayFor(modelItem => Model.Produto.reg_alt)</p>
+                <div class="estoque">
+                    <h3>estoque</h3>
+                    <div class="detalhe-container-estoque">
+                        <div class="detalhe-container-tamanhos">
+                            <h4>Tamanhos</h4>
+                            <p>PP</p>
+                        </div>
+                        <div class="detalhe-container-quantidade">
+                            <h4>Quantidades</h4>
+                            <p>1200</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </section>
+    <section>
+        <div class="movimentacoes">
+            <h3>histórico de movimentações</h3>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Data/hora</th>
+                        <th>Usuário</th>
+                        <th>Entrada</th>
+                        <th>Saída</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>2021-11-20</span>
+                        </td>
+                        <td>
+                            <span>Beatriz Medina</span>
+                        </td>
+                        <td>
+                            <span>1200</span>
+                        </td>
+                        <td>
+                            <span>--</span>
+                        </td>
+                    </tr>
+                </tbody>
 
-
-    </div>
-    <div class="col-md-3">
-        <a class="btn btn-outline-primary" asp-page="/Produtos/Edit" asp-route-id="@Model.Produto.Id">Editar</a> <!-- botão que chama a página e envia o ID do pokemon-->
-    </div>
-    <div class="col-md-3">
-        <a class="btn btn-outline-danger" asp-page="/Produtos/Delete" asp-route-id="@Model.Produto.Id">Apagar</a><!-- botão que chama a página e envia o ID do pokemon-->
-    </div>
-    <div class="col-md-3">
-        <input type="button" class="btn btn-outline-primary" value="Voltar" onClick="history.go(-1)">
-    </div>
-</div>
+            </table>
+        </div>
+    </section>
+</main>

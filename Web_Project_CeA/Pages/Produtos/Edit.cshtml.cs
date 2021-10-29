@@ -53,7 +53,7 @@ namespace Web_Project_CeA.Pages.Produtos
                     .PutAsJsonAsync("api/Produtos/" + Produto.Id, Produto);
                 if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToPage("./index");
+                    return RedirectToPage("./Index");
                 }
                 else
                 {

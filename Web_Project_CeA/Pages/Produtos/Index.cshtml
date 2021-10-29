@@ -17,7 +17,7 @@
     </div>
     <div class="table-title">
         <div>
-            <div class="col20">Imagem</div>
+            <div class="col80">Imagem</div>
             <div class="col80">Produto</div>
         </div>
         <div>
@@ -31,25 +31,25 @@
     @foreach (var data in Model.Produtos)
     {
         @* <p>Código Produto: @Html.DisplayFor(modelItem => data.Id)</p> *@
-        @* <p>Tamanho: @Html.DisplayFor(modelItem => data.tamanho)</p> *@
-        @* <p>Descrição: @Html.DisplayFor(modelItem => data.descricao)</p> *@
-        @* <p>Fornecedor: @Html.DisplayFor(modelItem => data.fornecedor)</p> *@
-        @* <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.usuario_alt)</p> *@
-        @* <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.reg_alt)</p> *@
+        @* <p>Tamanho: @Html.DisplayFor(modelItem => data.Tamanho)</p> *@
+        @* <p>Descrição: @Html.DisplayFor(modelItem => data.Descricao)</p> *@
+        @* <p>Fornecedor: @Html.DisplayFor(modelItem => data.Fornecedor)</p> *@
+        @* <p>Usuário de Alteração: @Html.DisplayFor(modelItem => data.Usuario_alt)</p> *@
+        @* <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.Reg_alt)</p> *@
 
         <div class="container-card">
         <div>
             <div class="col20">
-                <img src="@Html.DisplayFor(modelItem => data.imagem)" class="card-image" alt="foto do produto"/>
+                <img src="@Html.DisplayFor(modelItem => data.Imagem)" class="card-image" alt="foto do produto"/>
             </div>
             <div class="col80">
-                <p>@Html.DisplayFor(modelItem => data.nome)</p>
+                <p>@Html.DisplayFor(modelItem => data.Nome)</p>
             </div>
         </div>
         <div>
-            <div class="col25">@Html.DisplayFor(modelItem => data.divisao)</div>
-            <div class="col25">@Html.DisplayFor(modelItem => data.categoria)</div>
-            <div class="col25">@Html.DisplayFor(modelItem => data.estoque)</div>
+            <div class="col25">@Html.DisplayFor(modelItem => data.Divisao)</div>
+            <div class="col25">@Html.DisplayFor(modelItem => data.Categoria)</div>
+            <div class="col25">@Html.DisplayFor(modelItem => data.Estoque)</div>
             <div class="col25 details">
                 <a class="btn details" asp-page="/Produtos/Detail" asp-route-id="@data.Id">Detalhes</a>
             </div>

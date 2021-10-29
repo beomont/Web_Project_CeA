@@ -16,92 +16,97 @@
         <section class="container-produto">
             <div class="produto-info">
                 <div class="img-produto">
-                    <img src="@Html.DisplayFor(model=> Model.Produto.imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.nome)">
+                    <img src="@Html.DisplayFor(model=> Model.Produto.Imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.Nome)">
                     <div class="input-nova-img">
-                        <label asp-for="Produto.imagem">Alterar foto do produto</label>
-                        <input type="text" asp-for="Produto.imagem" id="imagem" placeholder="URL da imagem">
+                        <label asp-for="Produto.Imagem">Alterar foto do produto</label>
+                        <input type="text" asp-for="Produto.Imagem" id="imagem" placeholder="URL da imagem">
                     </div>
                     <div class="btn-details editar">
-                        <input type="submit" value="salvar alterações" class="btn secondary" />
+                        <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
+                        <input type="submit" value="alterar" class="btn secondary" />
                     </div>
                 </div>
                 <div class="produto">
 
                     <div class="produto-details">
-                        <input asp-for="Produto.nome"/>
-                        <textarea asp-for="Produto.descricao" id="produto-descricao" rows="5"></textarea>
+                        <input asp-for="Produto.Nome">
+                        <textarea asp-for="Produto.Descricao" id="produto-descricao" rows="5"></textarea>
                     </div>
                     <div class="departamento-categoria">
                         <div class="departamento-info">
-                            <label asp-for="Produto.divisao" >Departamento</label>
-                            <select asp-for="Produto.divisao" id="departamento">
-                                <option value="feminino">Feminino</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="infantil">Infantil</option>
-                                <option value="plus-size">Plus Size</option>
+                            <label asp-for="Produto.Divisao">Departamento</label>
+                            <select asp-for="Produto.Divisao" id="departamento">
+                                <option>Feminino</option>
+                                <option>Masculino</option>
+                                <option>Infantil</option>
+                                <option>Plus-Size</option>
                             </select>
                         </div>
                         <div class="categoria-info">
-                            <label asp-for="Produto.categoria">Categoria</label>
-                            <select asp-for="Produto.categoria" id="categoria">
-                                <option value="top">Top</option>
-                                <option value="bottom">Bottom</option>
-                                <option value="inteiro">Inteiro</option>
+                            <label asp-for="Produto.Categoria">Categoria</label>
+                            <select asp-for="Produto.Categoria" id="categoria">
+                                <option>Top</option>
+                                <option>Bottom</option>
+                                <option>Inteiro</option>
                             </select>
                         </div>
                     </div>
                     <div class="estoque">
-                        <h3>estoque</h3>
+                        <h3>Estoque</h3>
                         <div class="container-estoque">
                             <div class="container-tamanhos">
-                                <label asp-for="Produto.tamanho">Tamanhos</label>
-                                <input class="input-estoque" type="text" asp-for="Produto.tamanho">
+                                <label asp-for="Produto.Tamanho">Tamanhos</label>
+                                <input class="input-estoque" type="text" asp-for="Produto.Tamanho">
                             </div>
                             <div class="container-quantidade">
-                                <label asp-for="Produto.estoque">Quantidade</label>
-                                <input asp-for="Produto.estoque" class="input-estoque" type="text" >
+                                <label asp-for="Produto.Estoque">Quantidade</label>
+                                <input asp-for="Produto.Estoque" class="input-estoque" type="text">
                             </div>
                         </div>
                     </div>
                     <div class="fornecedor">
-                        <label asp-for="Produto.fornecedor">Fornecedor</label>
-                        <input asp-for="Produto.fornecedor" class="input-estoque" type="text">
+                        <label asp-for="Produto.Fornecedor">Fornecedor</label>
+                        <input asp-for="Produto.Fornecedor" class="input-estoque" type="text">
+                    </div>
+                    <div class="fornecedor">
+                        <select class="input-table" asp-for="Produto.Usuario_alt">
+                            <option value="Produto.Usuario_alt"></option>
+                            <option value="Beatriz Medina">Beatriz Medina</option>
+                            <option value="Bruno Lopes">Bruno Lopes</option>
+                            <option value="David Oliveira">David Oliveira</option>
+                            <option value="Gustavo Watanabe">Gustavo Watanabe</option>
+                            <option value="Neilyane Silva">Neilyane Silva</option>
+                            <option value="Thiago Vieira">Thiago Vieira</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </section>
         <section>
             <div class="movimentacoes">
-                <h3>histórico de movimentações</h3>
+                <h3>Última Alteração</h3>
                 <table class="content-table">
                     <thead>
                         <tr>
                             <th>Data/hora</th>
                             <th>Usuário</th>
-                            <th>Entrada</th>
-                            <th>Saída</th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>
-                                <input asp-for="Produto.reg_alt" class="input-table" type="datetime">
+                                <input asp-for="Produto.Reg_alt" class="input-table" type="datetime">
                             </td>
                             <td>
-                                <select class="input-table" name="usuario" id="usuario-td">
-                                    <option value="top">Beatriz Medina</option>
-                                    <option value="bottom">Bruno Lopes</option>
-                                    <option value="inteiro">David Oliveira</option>
-                                    <option value="inteiro">Gustavo Watanabe</option>
-                                    <option value="inteiro">Neilyane Silva</option>
-                                    <option value="inteiro">Thiago Vieira</option>
-                                </select>
+                                <input asp-for="Produto.Usuario_alt" class="input-table">
                             </td>
                             <td>
-                                <input class="input-table" type="text" placeholder="1200">
+                                
                             </td>
                             <td>
-                                <input class="input-table" type="text" placeholder="-">
+                                
                             </td>
                         </tr>
                     </tbody>

@@ -8,15 +8,15 @@ namespace Web_Project_CeA.Models
     public class Produto
     {
         public int Id { get; set; }
-        public string nome { get; set; }
-        public string tamanho { get; set; }
-        public string categoria { get; set; }
-        public string divisao { get; set; }
-        public string descricao { get; set; }
-        public int estoque { get; set; }
-        public string fornecedor { get; set; }
-        public string imagem { get; set; }
-        public string usuario_alt { get; set; }
-        public DateTime reg_alt { get; set; } = DateTime.Now;
+        public string Nome { get; set; }
+        public string Tamanho { get; set; }
+        public string Categoria { get; set; }
+        public string Divisao { get; set; }
+        public string Descricao { get; set; }
+        public int Estoque { get; set; }
+        public string Fornecedor { get; set; }
+        public string Imagem { get; set; }
+        public string Usuario_alt { get; set; }
+        public DateTime Reg_alt { get; set; } = DateTime.Now;
     }
 }

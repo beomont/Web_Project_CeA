@@ -12,16 +12,17 @@
     <section class="container-produto">
         <div class="produto-info">
             <div class="img-produto">
-                <img src="@Html.DisplayFor(model=> Model.Produto.imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.nome)">
+                <img src="@Html.DisplayFor(model=> Model.Produto.Imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.Nome)">
                 <div class="btn-details">
-                    <a asp-page="/Produtos/Edit" asp-route-id="@Model.Produto.Id" class="btn secondary">editar produto</a>
-                    <a asp-page="/Produtos/Delete" asp-route-id="@Model.Produto.Id" class="btn danger">excluir produto</a>
+                    <a asp-page="/Produtos/Index" class="btn secondary">voltar</a>
+                    <a asp-page="/Produtos/Edit" asp-route-id="@Model.Produto.Id" class="btn secondary">editar</a>
+                    <a asp-page="/Produtos/Delete" asp-route-id="@Model.Produto.Id" class="btn danger">excluir</a>
                 </div>
             </div>
             <div class="produto">
                 <div class="produto-details">
-                    <h3>@Html.DisplayFor(model => Model.Produto.nome)</h3>
-                    <p>@Html.DisplayFor(model => Model.Produto.descricao)</p>
+                    <h3>@Html.DisplayFor(model => Model.Produto.Nome)</h3>
+                    <p>@Html.DisplayFor(model => Model.Produto.Descricao)</p>
                 </div>
 
                 <div class="departamento-categoria">
@@ -30,7 +31,7 @@
                         <p>Feminino</p>
                     </div>
                     <div class="detalhe-categoria-info">
-                        <h4>Categoria</h4>
+                        <h4>@Html.DisplayFor(model => Model.Produto.Categoria)</h4>
                         <p>Top</p>
                     </div>
                 </div>
@@ -40,12 +41,12 @@
                     <h3>estoque</h3>
                     <div class="detalhe-container-estoque">
                         <div class="detalhe-container-tamanhos">
-                            <h4>Tamanhos</h4>
-                            <p>PP</p>
+                            <h4>Tamanho</h4>
+                            <p>@Html.DisplayFor(model => Model.Produto.Tamanho)</p>
                         </div>
                         <div class="detalhe-container-quantidade">
-                            <h4>Quantidades</h4>
-                            <p>1200</p>
+                            <h4>Quantidade</h4>
+                            <p>@Html.DisplayFor(model => Model.Produto.Estoque)</p>
                         </div>
                     </div>
                 </div>
@@ -55,34 +56,37 @@
     </section>
     <section>
         <div class="movimentacoes">
-            <h3>histórico de movimentações</h3>
+            <h3>Última Alteração</h3>
             <table class="content-table">
                 <thead>
                     <tr>
                         <th>Data/hora</th>
                         <th>Usuário</th>
-                        <th>Entrada</th>
-                        <th>Saída</th>
+                        <th></th>
+                        <th></th>
+
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>
-                            <span>2021-11-20</span>
+                            <span>@Html.DisplayFor(model => Model.Produto.Reg_alt)</span>
                         </td>
                         <td>
-                            <span>Beatriz Medina</span>
+                            <span>@Html.DisplayFor(model => Model.Produto.Usuario_alt)</span>
                         </td>
                         <td>
-                            <span>1200</span>
+                            
                         </td>
                         <td>
-                            <span>--</span>
+                            
                         </td>
+
                     </tr>
                 </tbody>
 
             </table>
         </div>
+       
     </section>
 </main>

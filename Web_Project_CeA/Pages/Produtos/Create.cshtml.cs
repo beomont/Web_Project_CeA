@@ -29,6 +29,7 @@ namespace Web_Project_CeA.Pages.Produtos
 
                 HttpResponseMessage response = await client
                     .PostAsJsonAsync("api/Produtos", Produto);
+                                        
 
                 if (response.IsSuccessStatusCode)
                 {

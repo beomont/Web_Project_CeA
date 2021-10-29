@@ -2,9 +2,40 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Layout = null;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Teste branch thiagovieira</a>.</p>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/styles.css">
+    <link rel="stylesheet" href="~/css/login.css">
+    <title>Login - C&A Controle de estoque</title>
+</head>
+
+<body>
+    <main class="container login">
+        <div class="container-login">
+            <img src="./img/logo.png" alt="logo" />
+            <h3>Bem-vinda(o) ao</h3>
+            <h2>Controle de estoque</h2>
+
+            <label class="label-text" for="user">Selecione seu usuário</label>
+            <select name="user" id="user">
+                <option value="Beatriz Medina">Beatriz Medina</option>
+                <option value="Bruno Lopes">Bruno Lopes</option>
+                <option value="David Oliveira">David Oliveira</option>
+                <option value="Gustavo Watanabe">Gustavo Watanabe</option>
+                <option value="Neilyane Silva">Neilyane Silva</option>
+                <option value="Thiago Vieira">Thiago Vieira</option>
+            </select>
+            <a class="btn CTA btn-login" asp-page="/Produtos/Index"> entrar</a>
+        </div>
+    </main>
+</body>
+
+</html>

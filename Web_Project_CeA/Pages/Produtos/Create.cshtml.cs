@@ -37,7 +37,7 @@ namespace Web_Project_CeA.Pages.Produtos
                 }
                 else
                 {
-                    return RedirectToPage("./Create");
+                    return RedirectToPage("./Error");
                 }
 
             }

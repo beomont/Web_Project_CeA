@@ -55,29 +55,35 @@
                         <h3>Estoque</h3>
                         <div class="container-estoque">
                             <div class="container-tamanhos">
-                                <label asp-for="Produto.Tamanho">Tamanhos</label>
-                                <input class="input-estoque" type="text" asp-for="Produto.Tamanho">
+                                <label asp-for="Produto.Tamanho">Tamanho</label>
+                                <select asp-for="Produto.Tamanho" id="tamanho">
+                                    <option>P</option>
+                                    <option>PP</option>
+                                    <option>M</option>
+                                    <option>G</option>
+                                    <option>GG</option>
+                                    <option>XG</option>
+                                </select>
                             </div>
                             <div class="container-quantidade">
-                                <label asp-for="Produto.Estoque">Quantidade</label>
-                                <input asp-for="Produto.Estoque" class="input-estoque" type="text">
+                                <input type="hidden" asp-for="Produto.Estoque">
                             </div>
-                        </div>
-                    </div>
-                    <div class="fornecedor">
+                         </div>
+                    <div class="container-tamanhos">
                         <label asp-for="Produto.Fornecedor">Fornecedor</label>
-                        <input asp-for="Produto.Fornecedor" class="input-estoque" type="text">
+                       <p> <input  class="input-estoque" asp-for="Produto.Fornecedor"> </p>
                     </div>
-                    <div class="fornecedor">
-                        <select class="input-table" asp-for="Produto.Usuario_alt">
-                            <option value="Produto.Usuario_alt"></option>
+                    <div class="container-tamanhos">
+                        <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
+                        <p><select class="input-estoque" asp-for="Produto.Usuario_alt" >
+                            <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
                             <option value="Beatriz Medina">Beatriz Medina</option>
                             <option value="Bruno Lopes">Bruno Lopes</option>
                             <option value="David Oliveira">David Oliveira</option>
                             <option value="Gustavo Watanabe">Gustavo Watanabe</option>
                             <option value="Neilyane Silva">Neilyane Silva</option>
                             <option value="Thiago Vieira">Thiago Vieira</option>
-                        </select>
+                        </select></p>
                     </div>
                 </div>
             </div>

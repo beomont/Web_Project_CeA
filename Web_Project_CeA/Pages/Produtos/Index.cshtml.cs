@@ -27,8 +27,10 @@ namespace Web_Project_CeA.Pages.Produtos
                 HttpResponseMessage response = await client.GetAsync("api/Produtos");
                 if (response.IsSuccessStatusCode)
                 {
+                    
                     string result = response.Content.ReadAsStringAsync().Result;
                     Produtos = JsonConvert.DeserializeObject<List<Produto>>(result);
+                    
                 }
 
             }

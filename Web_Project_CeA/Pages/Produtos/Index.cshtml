@@ -2,16 +2,21 @@
 @model Web_Project_CeA.Pages.Produtos.IndexModel
 @{
     ViewData["Title"] = "Estoque geral";
-}
+    @* aqui realiza a soma da quantidades dos campos estoque para todos os itens existentes*@
+    int total = Model.Produtos.Sum(x => Convert.ToInt32(x.Estoque));
+    string soma = string.Format("{0}", total);
 
+}
 
 <main class="container">
     <div class="container-info">
         <div class="container-title">
             <div class="breadcrumb">
-                <a asp-page="/Produtos"><span>Home</span></a>   
+                <a asp-page="/Produtos"><span>Home</span></a>
             </div>
-            <h1>Estoque geral</h1>
+            <h1>Estoque Geral</h1>
+            <h5>Exibindo @Model.Produtos.Count items cadastrados</h5>
+            <h5>Total em estoque: @total </h5>
         </div>
         <a class="btn CTA" asp-page="/Produtos/Create">Adicionar produto</a>
     </div>
@@ -30,6 +35,7 @@
 
     @foreach (var data in Model.Produtos)
     {
+
         @* <p>Código Produto: @Html.DisplayFor(modelItem => data.Id)</p> *@
         @* <p>Tamanho: @Html.DisplayFor(modelItem => data.Tamanho)</p> *@
         @* <p>Descrição: @Html.DisplayFor(modelItem => data.Descricao)</p> *@
@@ -38,24 +44,29 @@
         @* <p>Registro de Alteração: @Html.DisplayFor(modelItem => data.Reg_alt)</p> *@
 
         <div class="container-card">
-        <div>
-            <div class="col20">
-                <img src="@Html.DisplayFor(modelItem => data.Imagem)" class="card-image" alt="foto do produto"/>
+            <div>
+                <div class="col20">
+                    <img src="@Html.DisplayFor(modelItem => data.Imagem)" class="card-image" alt="foto do produto" />
+                </div>
+                <div class="col80">
+                    <p>@Html.DisplayFor(modelItem => data.Nome)</p>
+                </div>
             </div>
-            <div class="col80">
-                <p>@Html.DisplayFor(modelItem => data.Nome)</p>
+            <div>
+                <div class="col25">@Html.DisplayFor(modelItem => data.Divisao)</div>
+                <div class="col25">@Html.DisplayFor(modelItem => data.Categoria)</div>
+                <div class="col25">@Html.DisplayFor(modelItem => data.Estoque)</div>
+                <div class="col25 details">
+                    <a class="btn details" asp-page="/Produtos/Detail" asp-route-id="@data.Id">Detalhes</a>
+                    <a class="btn details" asp-page="/Produtos/EditEstoque" asp-route-id="@data.Id">Estoque</a>
+                </div>
             </div>
         </div>
-        <div>
-            <div class="col25">@Html.DisplayFor(modelItem => data.Divisao)</div>
-            <div class="col25">@Html.DisplayFor(modelItem => data.Categoria)</div>
-            <div class="col25">@Html.DisplayFor(modelItem => data.Estoque)</div>
-            <div class="col25 details">
-                <a class="btn details" asp-page="/Produtos/Detail" asp-route-id="@data.Id">Detalhes</a>
-                <a class="btn details" asp-page="/Produtos/EditEstoque" asp-route-id="@data.Id">Estoque</a>
-            </div>
-        </div>        
-        </div>
+
+
+       
+
     }
-        
+
+
 </main>

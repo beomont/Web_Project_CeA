@@ -10,7 +10,7 @@
 .container-estoque {
     display: flex;
 }
-
+ /* IMAGEM PRODUTO */
 .img-produto img {
     width: 502px;
     height: 502px;
@@ -43,7 +43,8 @@
     .input-nova-img label {
         font-weight: 700;
     }
-
+/* FIM IMAGEM PRODUTO */
+/* BTN */
 .btn-details {
     display: flex;
     justify-content: space-between;
@@ -54,8 +55,9 @@
     .btn-details.editar {
         justify-content: center;
     }
+/* FIM BTN */
 
-
+/* NOM E DESCRIÇÃO PRODUTO */
 .produto {
     margin-left: 45px;
     width: 100%;
@@ -68,12 +70,14 @@
 }
 
 #produto-descricao {
-    margin-top: 10px;
+    margin: 15px 0;
     padding-top: 8px;
     height: 30%;
     width: 100%;
 }
+/* FIM NOME E DESCRIÇÃO PRODUTO*/
 
+/*DIVISÃO, CATEGORIA E ESTOQUE*/
 .departamento-categoria,
 .detalhe-container-estoque {
     display: flex;
@@ -94,7 +98,8 @@
     .departamento-info input,
     .categoria-info input,
     .container-tamanhos input,
-    .container-quantidade input {
+    .container-quantidade input,
+    .container-fornecedor input{
         width: 100%;
     }
 
@@ -131,11 +136,17 @@ input {
     width: 100px;
 }
 
+.container-fornecedor {
+    margin-top: 10px;
+}
+
 .container-estoque {
     display: flex;
     justify-content: space-between;
 }
+ /* DIVISÃO, CATEGORIA E ESTOQUE*/
 
+ /* TABLE HISTORICO MOVIMENTAÇÕES*/
 .movimentacoes {
     margin: 50px 0 300px 0;
 }
@@ -168,6 +179,7 @@ input {
     padding: 0;
 }
 
+/* TABLE HISTORICO MOVIMENTAÇÕES*/
 
 @media screen and (max-width: 966px) {
     .produto-info {

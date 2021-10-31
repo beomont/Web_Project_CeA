@@ -11,7 +11,7 @@
         <span>>></span>
         <span>Editar produto</span>
     </div>
-    <form method="post">
+    <form class="form-auth" method="post">
         <input type="hidden" asp-for="Produto.Id" />
         <section class="container-produto">
             <div class="produto-info">
@@ -19,7 +19,8 @@
                     <img src="@Html.DisplayFor(model=> Model.Produto.imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.nome)">
                     <div class="input-nova-img">
                         <label asp-for="Produto.imagem">Alterar foto do produto</label>
-                        <input type="text" asp-for="Produto.imagem" id="imagem" placeholder="URL da imagem">
+                        <input type="text" asp-for="Produto.imagem" name="imagem" placeholder="URL da imagem">
+                        <span class="error-message"></span>
                     </div>
                     <div class="btn-details editar">
                         <input type="submit" value="salvar alterações" class="btn secondary" />
@@ -28,8 +29,10 @@
                 <div class="produto">
 
                     <div class="produto-details">
-                        <input asp-for="Produto.nome"/>
-                        <textarea asp-for="Produto.descricao" id="produto-descricao" rows="5"></textarea>
+                        <input asp-for="Produto.nome" name="nome" />
+                        <span class="error-message"></span>
+                        <textarea asp-for="Produto.descricao" name="descricao" id="produto-descricao" rows="5"></textarea>
+                        <span class="error-message"></span>
                     </div>
                     <div class="departamento-categoria">
                         <div class="departamento-info">
@@ -55,17 +58,20 @@
                         <div class="container-estoque">
                             <div class="container-tamanhos">
                                 <label asp-for="Produto.tamanho">Tamanhos</label>
-                                <input class="input-estoque" type="text" asp-for="Produto.tamanho">
+                                <input class="input-estoque" type="text" name="tamanho" asp-for="Produto.tamanho">
+                                <span class="error-message"></span>
                             </div>
                             <div class="container-quantidade">
                                 <label asp-for="Produto.estoque">Quantidade</label>
-                                <input asp-for="Produto.estoque" class="input-estoque" type="text" >
+                                <input asp-for="Produto.estoque" class="input-estoque" name="estoque" type="text">
+                                <span class="error-message"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="fornecedor">
+                    <div class="conatiner-fornecedor">
                         <label asp-for="Produto.fornecedor">Fornecedor</label>
-                        <input asp-for="Produto.fornecedor" class="input-estoque" type="text">
+                        <input asp-for="Produto.fornecedor" class="input-fornecedor" name="fornecedor" type="text">
+                        <span class="error-message"></span>
                     </div>
                 </div>
             </div>

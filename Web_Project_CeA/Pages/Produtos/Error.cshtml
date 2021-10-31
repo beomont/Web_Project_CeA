@@ -1,0 +1,20 @@
+﻿@page
+@model ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">OPS!</h1>
+<h2 class="text-danger">Algo de errado aconteceu. Tente novamente em instantes</h2>
+<input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+
+    
+}
+
+

@@ -5,9 +5,9 @@
 
 <main>
     <div class="breadcrumb">
-        <a href="../../index.html"><span>Home</span></a>
+        <a asp-page="/Produtos/Index"><span>Home</span></a>
         <span>>></span>
-        <span>Detalhe produto</span>
+        <span asp-page="/Produtos/Detail" asp-route-id="@Model.Produto.Id">Detalhe produto</span>
     </div>
     <section class="container-produto">
         <div class="produto-info">
@@ -26,12 +26,12 @@
 
                 <div class="departamento-categoria">
                     <div class="detalhe-departamento-info">
-                        <h4>Departamento</h4>
-                        <p>Feminino</p>
+                        <h4>Divisão</h4>
+                        <p asp-for="">@Html.DisplayFor(model => Model.Produto.divisao)</p>
                     </div>
                     <div class="detalhe-categoria-info">
                         <h4>Categoria</h4>
-                        <p>Top</p>
+                        <p>@Html.DisplayFor(model => Model.Produto.categoria)</p>
                     </div>
                 </div>
 
@@ -41,12 +41,16 @@
                     <div class="detalhe-container-estoque">
                         <div class="detalhe-container-tamanhos">
                             <h4>Tamanhos</h4>
-                            <p>PP</p>
+                            <p>@Html.DisplayFor(model => Model.Produto.tamanho)</p>
                         </div>
                         <div class="detalhe-container-quantidade">
                             <h4>Quantidades</h4>
-                            <p>1200</p>
+                            <p>@Html.DisplayFor(model => Model.Produto.estoque)</p>
                         </div>
+                    </div>
+                    <div class="fornecedor">
+                        <label asp-for="Produto.fornecedor">Fornecedor</label>
+                        <input asp-for="Produto.fornecedor" class="input-estoque" type="text">
                     </div>
                 </div>
 
@@ -68,10 +72,10 @@
                 <tbody>
                     <tr>
                         <td>
-                            <span>2021-11-20</span>
+                            <span>@Html.DisplayFor(model => Model.Produto.reg_alt)</span>
                         </td>
                         <td>
-                            <span>Beatriz Medina</span>
+                            <span>@Html.DisplayFor(model => Model.Produto.usuario_alt)</span>
                         </td>
                         <td>
                             <span>1200</span>
@@ -81,7 +85,6 @@
                         </td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
     </section>

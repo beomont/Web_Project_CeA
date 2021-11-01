@@ -361,6 +361,7 @@ header {
     border-radius: 8px;
     background-color: var(--SNOW-LIGHT);
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .card-image {
@@ -391,7 +392,14 @@ header {
 .delete-buttons a {
     margin-left: 20px;
 }
+/*END DELETE*/
 
+/*FOOTER*/
+footer{
+    margin-top: 50px;
+    text-align: center;
+}
+/*END FOOTER*/
 
 @media screen and (max-width: 966px) {
     .col20, .col25 {

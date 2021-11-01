@@ -198,8 +198,29 @@ textarea {
         background-color: var(--CEA);
         color: white;
         margin-left: 7%;
-        padding: 0 35px;
+        padding: 10px 35px;
+        font-size: 0.85rem;
+        height: auto;
     }
+
+    .btn.details {
+        background-color: var(--CEA);
+        height: auto;
+        color: white;
+        margin-left: 7%;
+        padding: 10px 35px;
+        font-size: 0.85rem;
+    }
+
+    .btn.details + .btn.details {
+        margin-top: 5px;
+    }
+
+        .btn.details:hover {
+            background-color: var(--CEA-LIGHT);
+            box-shadow: 0 4px 4px 0 var(--SMOKE-LIGHTER);
+            transition: all 0.5s;
+        }
 
     .btn.danger {
         background-color: var(--DANGER);
@@ -318,10 +339,14 @@ header {
     padding: 0 20px 8px 20px;
 }
 
-    .table-title > div,
-    .container-card > div {
+    .card-ImgNome {
         display: flex;
-        width: 50%;
+        width: 40%;
+        align-items: center;
+    }
+    .card-Infos {
+        display: flex;
+        width: 60%;
         align-items: center;
     }
 
@@ -355,12 +380,21 @@ header {
     font-weight: 500;
 }
 
+.feed-cards {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .container-card {
     display: flex;
     padding: 20px;
     border-radius: 8px;
     background-color: var(--SNOW-LIGHT);
     align-items: center;
+}
+
+.container-card + .container-card {
+    margin-bottom: 15px;
 }
 
 .card-image {
@@ -414,3 +448,4 @@ header {
         justify-content: space-between;
     }
 }
+

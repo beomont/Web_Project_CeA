@@ -6,7 +6,7 @@
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/Projeto%20C&A.png" alt="Diagrama de descrição do projeto">
 
 # Descrição do front end
-O Front End do projeto foi baseado com o layout criado no Figma, pensando em um visual minimalista e clean com semelhanças próprias ao do site da C&A
+O Front End do projeto foi baseado com o layout criado no Figma, pensando em um visual minimalista e clean com semelhanças próprias ao do site da C&A.
 
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/figmascreen.png" alt="Diagrama de descrição do projeto">
 
@@ -23,7 +23,7 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 
 <h2> Tecnologias utilizadas para criar </h2>
 <div align="start">
-  <p> ▪️ C# </p>
+  <p> ▪️ C# (ASP.NET Core, EntityFramework) </p>
   <p> ▪️ JavaScript </p>
   <p> ▪️ MySQL </p>
   <p> ▪️ CSS </p>

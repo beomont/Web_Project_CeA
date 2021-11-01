@@ -4,24 +4,16 @@
     ViewData["Title"] = "Error";
 }
 
-<main>
-    <div class="container-error">
-        <h2>OPS!</h2>
-        <h2>Algo de errado aconteceu. Tente novamente em instantes</h2>
-        <div class="btn-return">
-            <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
-        </div>
-    </div>
-</main>
+    <section class="error">
+        <h1 class="text-danger">OPS!</h1>
+        <h2 class="text-danger">Algo de errado aconteceu. Tente novamente em instantes</h2>
 
-
-@if (Model.ShowRequestId)
-{
-    <p>
-        <strong>Request ID:</strong> <code>@Model.RequestId</code>
-    </p>
-
+        @if (Model.ShowRequestId)
+        {
+            <p>
+                <strong>Request ID:</strong> <code>@Model.RequestId</code>
+            </p>
+        }
+        <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
     
-}
-
-
+    </section>

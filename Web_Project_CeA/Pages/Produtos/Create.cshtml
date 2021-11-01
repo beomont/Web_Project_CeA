@@ -6,18 +6,19 @@
 
 <main>
         <div class="breadcrumb">
-            <a href="../../index.html"><span>Home</span></a>
+            <a asp-page="/Produtos/Index"><span>Home</span></a>
             <span>>></span>
             <span>Adicionar produto</span>
         </div>
-        <form method="post">
+        <form class="form-auth" method="post">
 
             <section class="container-produto">
                 <div class="produto-info">
                     <div class="img-produto">
                         <div class="img-area">
                             <label for="Imagem">Foto do produto</label>
-                            <input type="text" id="Imagem" name="Imagem"  placeholder="URL da imagem" required>
+                            <input type="text" id="Imagem" name="imagem" placeholder="URL da imagem" required>
+                            <span class=error-message></span>
                         </div>
                         <div class="btn-details">
                             <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
@@ -26,26 +27,32 @@
                     </div>
                     <div class="produto">
                         <div class="produto-details">
-                            <input type="text" class="form-control" id="nome" name="Nome" placeholder="nome do produto" required>     
-                            <textarea class="form-control" name="Descricao" id="produto-descricao" rows="5" placeholder="descrição do produto, até 300 caracteres" ></textarea>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="nome do produto" required>
+                            <span class=error-message></span>
+                            <textarea class="form-control" name="descricao" id="produto-descricao" rows="5" placeholder="descrição do produto, até 300 caracteres"></textarea>
+                            <span class=error-message></span>
                         </div>
                         <div class="departamento-categoria">
                             <div class="departamento-info">
                                 <label for="Divisao">Departamento</label>
-                                <select class="form-control" id="divisao" name="Divisao" required>
-                                    <option>Feminino</option>
-                                    <option>Masculino</option>
-                                    <option>Infantil</option>
-                                    <option>Plus Size</option>
+                                <select class="form-control" id="divisao" name="divisao" required>
+                                    <option value="" selected>Selecione uma opção</option>
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Infantil">Infantil</option>
+                                    <option value="Plus Size">Plus Size</option>
                                 </select>
+                                <span class=error-message></span>
                             </div>
                             <div class="categoria-info">
                                 <label for="Categoria">Categoria</label>
-                                <select id="categoria" name="Categoria" required>
-                                    <option>Top</option>
-                                    <option>Bottom</option>
-                                    <option>Inteiro</option>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="" selected>Selecione uma opção</option>
+                                    <option value="Top">Top</option>
+                                    <option value="Bottom">Bottom</option>
+                                    <option value="Inteiro">Inteiro</option>
                                 </select>
+                                <span class=error-message></span>
                             </div>
                         </div>
                         <div class="estoque">
@@ -53,35 +60,41 @@
                             <div class="container-estoque">
                                 <div class="container-tamanhos">
                                     <label for="Tamanho">Tamanhos</label>
-                                    <select id="tamanho" name="Tamanho" required>
-                                        <option>PP </option>
-                                        <option>P</option>
-                                        <option>M</option>
-                                        <option>G</option>
-                                        <option>GG</option>
-                                        <option>XG</option>
+                                    <select id="tamanho" name="tamanho" required>
+                                        <option value="" selected>Selecione uma opção</option>
+                                        <option value="PP">PP </option>
+                                        <option value="P">P</option>
+                                        <option value="M">M</option>
+                                        <option value="G">G</option>
+                                        <option value="GG">GG</option>
+                                        <option value="XG">XG</option>
                                     </select>
+                                    <span class=error-message></span>
                                 </div>
                                 <div class="container-quantidade">
                                     <label for="Estoque">Quantidade</label>
-                                    <input class="input-estoque" type="text" name="Estoque">  
+                                    <input class="input-estoque" type="text" name="estoque">
+                                    <span class=error-message></span>
                                 </div>
                             </div>
                             <div class="container-estoque">
-                                 <div class="container-tamanhos">
+                                <div class="container-tamanhos">
                                     <label for="Fornecedor"> Fornecedor </label>
-                                    <input type="text" id="fornecedor" name="Fornecedor" required>
+                                    <input type="text" id="fornecedor" name="fornecedor" required>
+                                    <span class=error-message></span>
                                 </div>
                                 <div class="container-quantidade">
                                     <label for="Usuario_alt"> Usuário do Cadastro</label>
-                                    <select id="usuario_alt" name="Usuario_alt" required>
-                                        <option>Beatriz Medina</option>
-                                        <option>Bruno Lopes</option>
-                                        <option>David Oliveira</option>
-                                        <option>Gustavo Watanabe</option>
-                                        <option>Neilyane Silva</option>
-                                        <option>Thiago Vieira</option>
-                                    </select>  
+                                    <select id="usuario_alt" name="usuario_alt" required>
+                                        <option value="" selected>Selecione uma opção</option>
+                                        <option value="Beatriz Medina">Beatriz Medina</option>
+                                        <option value="Bruno Lopes">Bruno Lopes</option>
+                                        <option value="David Oliveira">David Oliveira</option>
+                                        <option value="Gustavo Watanabe">Gustavo Watanabe</option>
+                                        <option value="Neilyane Silva">Neilyane Silva</option>
+                                        <option value="Thiago Vieira">Thiago Vieira</option>
+                                    </select>
+                                    <span class=error-message></span>
                                 </div>
                             </div>
 

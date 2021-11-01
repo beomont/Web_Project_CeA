@@ -350,6 +350,14 @@ header {
         align-items: center;
     }
 
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    border-top: 1px solid var(--BLACK);
+    padding: 8px 20px 0px 20px;
+}
+
 .col20 {
     width: 20%;
     padding-right: 10px;

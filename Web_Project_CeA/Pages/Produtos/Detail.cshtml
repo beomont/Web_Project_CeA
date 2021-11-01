@@ -28,15 +28,13 @@
                 <div class="departamento-categoria">
                     <div class="detalhe-departamento-info">
                         <h4>Divisão</h4>
-                        <p asp-for="">@Html.DisplayFor(model => Model.Produto.divisao)</p>
+                        <p>@Html.DisplayFor(model => Model.Produto.Divisao)</p>
                     </div>
                     <div class="detalhe-categoria-info">
-                        <h4>@Html.DisplayFor(model => Model.Produto.Categoria)</h4>
-                        <p>Top</p>
+                        <h4>Categoria</h4>
+                        <p>@Html.DisplayFor(model => Model.Produto.Categoria)</p>
                     </div>
                 </div>
-
-
                 <div class="estoque">
                     <h3>estoque</h3>
                     <div class="detalhe-container-estoque">
@@ -50,7 +48,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -62,9 +59,6 @@
                     <tr>
                         <th>Data/hora</th>
                         <th>Usuário</th>
-                        <th></th>
-                        <th></th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -75,17 +69,9 @@
                         <td>
                             <span>@Html.DisplayFor(model => Model.Produto.Usuario_alt)</span>
                         </td>
-                        <td>
-                            
-                        </td>
-                        <td>
-                            
-                        </td>
-
                     </tr>
                 </tbody>
             </table>
-        </div>
-       
+        </div> 
     </section>
 </main>

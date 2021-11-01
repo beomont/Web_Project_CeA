@@ -198,8 +198,29 @@ textarea {
         background-color: var(--CEA);
         color: white;
         margin-left: 7%;
-        padding: 0 35px;
+        padding: 10px 35px;
+        font-size: 0.85rem;
+        height: auto;
     }
+
+    .btn.details {
+        background-color: var(--CEA);
+        height: auto;
+        color: white;
+        margin-left: 7%;
+        padding: 10px 35px;
+        font-size: 0.85rem;
+    }
+
+    .btn.details + .btn.details {
+        margin-top: 5px;
+    }
+
+        .btn.details:hover {
+            background-color: var(--CEA-LIGHT);
+            box-shadow: 0 4px 4px 0 var(--SMOKE-LIGHTER);
+            transition: all 0.5s;
+        }
 
     .btn.danger {
         background-color: var(--DANGER);
@@ -318,12 +339,24 @@ header {
     padding: 0 20px 8px 20px;
 }
 
-    .table-title > div,
-    .container-card > div {
+    .card-ImgNome {
         display: flex;
-        width: 50%;
+        width: 40%;
         align-items: center;
     }
+    .card-Infos {
+        display: flex;
+        width: 60%;
+        align-items: center;
+    }
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    border-top: 1px solid var(--BLACK);
+    padding: 8px 20px 0px 20px;
+}
 
 .col20 {
     width: 20%;
@@ -355,12 +388,21 @@ header {
     font-weight: 500;
 }
 
+.feed-cards {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .container-card {
     display: flex;
     padding: 20px;
     border-radius: 8px;
     background-color: var(--SNOW-LIGHT);
     align-items: center;
+}
+
+.container-card + .container-card {
+    margin-bottom: 15px;
 }
 
 .card-image {
@@ -382,15 +424,40 @@ header {
 .deletar h1 {
     margin-bottom: 20px;
 }
+/* .container-card.deletar{
+    display: flex;
+    justify-content: space-between;
+} */
 
-.deletar .delete-buttons {
+.delete-buttons {
     display: flex;
     justify-content: flex-end;
 }
 
-.delete-buttons a {
+.delete-buttons input {
     margin-left: 20px;
 }
+
+.card-Infos.delete {
+    justify-content: flex-end;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: center;
+}
+
+.error input {
+    width: fit-content;
+}
+
+.error p {
+    margin: 50px 0;
+}
+
+
 
 
 @media screen and (max-width: 966px) {
@@ -398,10 +465,11 @@ header {
         display: none;
     }
 
-        .col25.details {
+        .col20.details {
             display: flex;
             width: 100%;
-            justify-content: flex-end;
+            flex-direction: column;
+            /* justify-content: flex-end; */
         }
 
     .col80 {
@@ -414,3 +482,4 @@ header {
         justify-content: space-between;
     }
 }
+

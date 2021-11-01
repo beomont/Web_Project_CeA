@@ -55,6 +55,10 @@
     .btn-details.editar {
         justify-content: center;
     }
+
+    .btn.secondary {
+        margin-right: 10px;
+    }
 /* FIM BTN */
 
 /* NOM E DESCRIÇÃO PRODUTO */
@@ -88,11 +92,13 @@
 .departamento-info,
 .categoria-info,
 .container-tamanhos,
-.container-quantidade {
+.container-quantidade,
+.container-useralt{
     display: flex;
     flex-direction: column;
     font-weight: 700;
     width: 40%;
+    margin-bottom: 10px;
 }
 
     .departamento-info input,

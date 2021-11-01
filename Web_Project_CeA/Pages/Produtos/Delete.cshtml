@@ -7,23 +7,23 @@
         <section class="deletar">
             <h1>Deseja realmente excluir o produto?</h1>
             <div class="container-card">
-            <div>
-                <div class="col20">
-                    <img src="@Html.DisplayFor(model => model.Produto.Imagem)" class="card-image" alt="foto do produto"/>
+                <div class="card-ImgNome">
+                    <div class="col20">
+                        <img src="@Html.DisplayFor(model => model.Produto.Imagem)" class="card-image" alt="foto do produto"/>
+                    </div>
+                    <div class="col80">
+                        <p>@Html.DisplayFor(model => model.Produto.Nome)</p>
+                    </div>
                 </div>
-                <div class="col80">
-                    <p>@Html.DisplayFor(model => model.Produto.Nome)</p>
+                <div class="card-Infos delete">
+                    <form method="post">
+                        <div class="delete-buttons">
+                            <input type="button" class="btn secondary" value="cancelar" onClick="history.go(-1)">
+                            <input type="Submit" value="excluir" class="btn danger">
+                        </div>
+                    </form>
                 </div>
             </div>
-            <form method="post">
-                <div class="delete-buttons">
-                    <input type="button" class="btn secondary" value="cancelar" onClick="history.go(-1)">
-                    <input type="Submit" value="excluir" class="btn danger">
-                </div>
-            </form>
-            
-        </div>
-
          
         </section>
     </main>

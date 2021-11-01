@@ -424,14 +424,22 @@ header {
 .deletar h1 {
     margin-bottom: 20px;
 }
+/* .container-card.deletar{
+    display: flex;
+    justify-content: space-between;
+} */
 
-.deletar .delete-buttons {
+.delete-buttons {
     display: flex;
     justify-content: flex-end;
 }
 
-.delete-buttons a {
+.delete-buttons input {
     margin-left: 20px;
+}
+
+.card-Infos.delete {
+    justify-content: flex-end;
 }
 
 

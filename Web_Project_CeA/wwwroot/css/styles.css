@@ -440,10 +440,11 @@ header {
         display: none;
     }
 
-        .col25.details {
+        .col20.details {
             display: flex;
             width: 100%;
-            justify-content: flex-end;
+            flex-direction: column;
+            /* justify-content: flex-end; */
         }
 
     .col80 {

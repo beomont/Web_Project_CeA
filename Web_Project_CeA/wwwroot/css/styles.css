@@ -345,6 +345,11 @@ header {
     padding-right: 10px;
 }
 
+.col50 {
+    width: 100%;
+    padding-right: 10px;
+}
+
 .table-title > div {
     font: "Roboto" var(--BLACK);
     font-weight: 500;

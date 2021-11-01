@@ -23,7 +23,7 @@ namespace Web_Project_CeA.Pages
 
         public void OnGet()
         {
-
+           
         }
     }
 }

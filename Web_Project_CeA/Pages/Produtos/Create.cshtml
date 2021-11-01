@@ -16,44 +16,44 @@
                 <div class="produto-info">
                     <div class="img-produto">
                         <div class="img-area">
-                            <label for="imagem">Foto do produto</label>
-                            <input type="text" id="imagem" name="imagem"  placeholder="URL da imagem" required>
+                            <label for="Imagem">Foto do produto</label>
+                            <input type="text" id="Imagem" name="Imagem"  placeholder="URL da imagem" required>
                         </div>
                         <div class="btn-details">
                             <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
-                            <input type="submit" value="salvar alterações" class="btn CTA" /> <!--insere botão submit para enviar os dados dos campos do fomulário via método POST-->
+                            <input type="submit" value="salvar" class="btn CTA" /> <!--insere botão submit para enviar os dados dos campos do fomulário via método POST-->
                         </div>
                     </div>
                     <div class="produto">
                         <div class="produto-details">
-                            <input type="text" class="form-control" id="nome" name="nome" placeholder="nome do produto" required>     
-                            <textarea name="descricao" id="produto-descricao" rows="5" placeholder="descrição do produto, até 240 caracteres" ></textarea>
+                            <input type="text" class="form-control" id="nome" name="Nome" placeholder="nome do produto" required>     
+                            <textarea class="form-control" name="Descricao" id="produto-descricao" rows="5" placeholder="descrição do produto, até 300 caracteres" ></textarea>
                         </div>
                         <div class="departamento-categoria">
                             <div class="departamento-info">
-                                <label for="divisao">Departamento</label>
-                                <select class="form-control" id="divisao" name="divisao" required>
-                                    <option value="feminino">Feminino</option>
-                                    <option value="masculino">Masculino</option>
-                                    <option value="infantil">Infantil</option>
-                                    <option value="plus-size">Plus Size</option>
+                                <label for="Divisao">Departamento</label>
+                                <select class="form-control" id="divisao" name="Divisao" required>
+                                    <option>Feminino</option>
+                                    <option>Masculino</option>
+                                    <option>Infantil</option>
+                                    <option>Plus Size</option>
                                 </select>
                             </div>
                             <div class="categoria-info">
-                                <label for="categoria">Categoria</label>
-                                <select id="categoria" name="categoria" required>
-                                    <option value="top">Top</option>
-                                    <option value="bottom">Bottom</option>
-                                    <option value="inteiro">Inteiro</option>
+                                <label for="Categoria">Categoria</label>
+                                <select id="categoria" name="Categoria" required>
+                                    <option>Top</option>
+                                    <option>Bottom</option>
+                                    <option>Inteiro</option>
                                 </select>
                             </div>
                         </div>
                         <div class="estoque">
-                            <h3>estoque</h3>
+                            <h3>Estoque</h3>
                             <div class="container-estoque">
                                 <div class="container-tamanhos">
-                                    <label for="tamanho">Tamanhos</label>
-                                    <select id="tamanho" name="tamanho" required>
+                                    <label for="Tamanho">Tamanhos</label>
+                                    <select id="tamanho" name="Tamanho" required>
                                         <option>PP </option>
                                         <option>P</option>
                                         <option>M</option>
@@ -63,24 +63,24 @@
                                     </select>
                                 </div>
                                 <div class="container-quantidade">
-                                    <label for="estoque">Quantidade</label>
-                                    <input class="input-estoque" type="text" name="estoque">  
+                                    <label for="Estoque">Quantidade</label>
+                                    <input class="input-estoque" type="text" name="Estoque">  
                                 </div>
                             </div>
                             <div class="container-estoque">
                                  <div class="container-tamanhos">
-                                    <label for="fornecedor"> Fornecedor </label>
-                                    <input type="text" id="fornecedor" name="fornecedor" required>
+                                    <label for="Fornecedor"> Fornecedor </label>
+                                    <input type="text" id="fornecedor" name="Fornecedor" required>
                                 </div>
                                 <div class="container-quantidade">
-                                    <label for="usuario_alt"> Usuário da Alteração</label>
-                                    <select id="usuario_alt" name="usuario_alt" required>
-                                        <option>Bruno</option>
-                                        <option>Beatriz</option>
-                                        <option>David</option>
-                                        <option>Gustavo</option>
-                                        <option>Neilyane</option>
-                                        <option>Thiago</option>
+                                    <label for="Usuario_alt"> Usuário do Cadastro</label>
+                                    <select id="usuario_alt" name="Usuario_alt" required>
+                                        <option>Beatriz Medina</option>
+                                        <option>Bruno Lopes</option>
+                                        <option>David Oliveira</option>
+                                        <option>Gustavo Watanabe</option>
+                                        <option>Neilyane Silva</option>
+                                        <option>Thiago Vieira</option>
                                     </select>  
                                 </div>
                             </div>
@@ -92,9 +92,5 @@
                 </div>
             </section>
         </form>
-            <section>
-                <div class="movimentacoes">
-                    
-                </div>
-            </section>
+           
     </main>

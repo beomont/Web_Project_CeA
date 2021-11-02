@@ -74,6 +74,9 @@
     margin-left: 45px;
     width: 100%;
 }
+.produto-details {
+    margin-bottom: 30px; 
+}
 
 .produto-details input {
     font-size: 1.25rem;
@@ -86,7 +89,7 @@
 }
 
 #produto-descricao {
-    margin: 15px 0;
+    margin: 15px 0 0 0;
     padding-top: 8px;
     height: 30%;
     width: 100%;
@@ -144,7 +147,8 @@
 }
 
 label,
-input {
+input,
+select {
     margin-bottom: 8px;
 }
 

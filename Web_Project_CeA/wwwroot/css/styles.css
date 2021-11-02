@@ -491,5 +491,14 @@ footer {
         width: 100%;
         justify-content: space-between;
     }
+
+    .logout-icon {
+        margin-left: 10px;
+    }
+
+    .user > img {
+        display: none;
+    }
+
 }
 

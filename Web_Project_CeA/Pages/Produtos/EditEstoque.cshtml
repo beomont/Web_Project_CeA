@@ -10,7 +10,7 @@
         <span>>></span>
         <span>Editar estoque</span>
     </div>
-    <form method="post">
+    <form method="post" class="form-auth">
         <input type="hidden" asp-for="Produto.Id" />
         <section class="container-produto">
             <div class="produto-info">
@@ -60,12 +60,11 @@
                         <div class="container-estoque">
                             <div class="container-tamanhos">
                                 <label asp-for="Produto.Estoque">Novo Estoque</label>
-                                <input  class="input-estoque" asp-for="Produto.Estoque">
+                                <input class="input-estoque" asp-for="Produto.Estoque">
                             </div>
                             <div class="container-quantidade">
                                 <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
-                                <p>
-                                    <select class="input-estoque" asp-for="Produto.Usuario_alt">
+                                    <select asp-for="Produto.Usuario_alt" onChange="validateSelect(this)">
                                         <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
                                         <option value="Beatriz Medina">Beatriz Medina</option>
                                         <option value="Bruno Lopes">Bruno Lopes</option>
@@ -74,7 +73,7 @@
                                         <option value="Neilyane Silva">Neilyane Silva</option>
                                         <option value="Thiago Vieira">Thiago Vieira</option>
                                     </select>
-                                </p>
+                                    <span class=error-message></span>
                             </div>
                         </div>
                         

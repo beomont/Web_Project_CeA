@@ -98,6 +98,7 @@
 .detalhe-container-estoque {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .departamento-info,
@@ -107,7 +108,6 @@
 .container-useralt{
     display: flex;
     flex-direction: column;
-    font-weight: 700;
     width: 40%;
     margin-bottom: 10px;
 }
@@ -118,6 +118,14 @@
     .container-quantidade input,
     .container-fornecedor input{
         width: 100%;
+    }
+
+    .departamento-info label,
+    .categoria-info label,
+    .container-tamanhos label,
+    .container-quantidade label,
+    .container-useralt label{
+        font-weight: 700;
     }
 
 .detalhe-departamento-info,

@@ -1,10 +1,7 @@
 ﻿const form = document.querySelector('.form-auth');
 const errorContainer = document.querySelector('.error-message');
 const { imagem, nome, descricao, tamanho, estoque, fornecedor } = form.elements;
-const formElements = [imagem, nome, descricao, tamanho, fornecedor];
-const selectInput = document.getElementsByTagName('select');
 
-console.log(selectInput);
 
 function validateUrlImageInput() {
     const isValidUrlImage = imagem.value.includes('https://') && imagem.value.includes('.');
@@ -95,7 +92,7 @@ function validateFornecedorInput() {
 fornecedor.onblur = validateFornecedorInput;
 
 function validateStockInput() {
-    const isStockWithinLimit = estoque.value.trim().length >= 3 && estoque.value.trim().length <= 45;
+    const isStockWithinLimit = estoque.value.trim().length >= 1 && estoque.value.trim().length <= 45;
 
     const span = estoque.nextElementSibling;
     span.innerText = "";
@@ -114,22 +111,20 @@ function validateStockInput() {
 
 estoque.onblur = validateStockInput;
 
-function validateSelect() {
-    const isSelectEmpty = selectInput.options[selectInput.selectedIndex].value == "";
-
-    const span = selectInput.nextElementSibling;
+function validateSelect(input) {
+    const isSelectEmpty = (input.options[input.selectedIndex].value == "");
+    console.log(input.options[input.selectedIndex].value)
+    const span = input.nextElementSibling;
     span.innerText = "";
 
     if (isSelectEmpty) {
-        selectInput.style.borderColor = "#c12137";
+        input.style.borderColor = "#c12137";
         span.innerText = "Selecione uma opção válida!"
-        selectInput.insertAdjacentElement('afterend', span);
+        input.insertAdjacentElement('afterend', span);
         return false
     }
 
-    selectInput.style.borderColor = "green";
+    input.style.borderColor = "green";
 
     return true
 }
-
-selectInput.onblur = validateSelect;

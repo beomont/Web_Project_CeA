@@ -19,7 +19,8 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 
 <h2> Como usar </h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est dolor, euismod ut pretium ac, condimentum ac libero. Vestibulum aliquet neque eget magna mollis convallis. Cras vitae rhoncus justo. Sed neque turpis, lacinia eget luctus ac, finibus at metus. Pellentesque augue enim, ullamcorper quis sodales sed, iaculis nec arcu. Nunc vestibulum imperdiet mi nec hendrerit. Vivamus vel convallis lectus. Ut sodales urna erat, congue suscipit mauris pretium molestie. Maecenas faucibus mollis lacus a sodales. Sed tempor tempor porttitor.</p>
+<p> Com o projeto do repositório aberto no Visual Studio 2019, vá na pasta Properties e entre no arquivo launchSettings.json e troque a sslPort para a mesma do seu ProjetoAPI e vá também na pasta Pages > Produtos e troque a baseURL de cada arquivo com a terminação "cshtml.cs" para o endereço do seu localhost(mesmo do ProjetoAPI).
+</p>
 
 <h2> Tecnologias utilizadas para criar </h2>
 <div align="start">

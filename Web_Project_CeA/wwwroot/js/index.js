@@ -113,7 +113,7 @@ estoque.onblur = validateStockInput;
 
 function validateSelect(input) {
     const isSelectEmpty = (input.options[input.selectedIndex].value == "");
-    console.log(input.options[input.selectedIndex].value)
+
     const span = input.nextElementSibling;
     span.innerText = "";
 

@@ -311,6 +311,10 @@ header {
     .user > div > p {
         font-weight: 700;
     }
+    .logout-icon {
+        margin-left: 40px;
+        margin-right: -10px;
+    }
 /* END HEADER */
 
 

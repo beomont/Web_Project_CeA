@@ -65,26 +65,29 @@
                                     <option>XG</option>
                                 </select>
                             </div>
+
+                            <div class="container-tamanhos">
+                                <label asp-for="Produto.Fornecedor">Fornecedor</label>
+                                <input  class="input-estoque" asp-for="Produto.Fornecedor">
+                            </div>
+                        </div>
+                        <div class="container-estoque">
+                            <div class="container-tamanhos">
+                                <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
+                                <p><select class="input-estoque" asp-for="Produto.Usuario_alt" >
+                                    <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
+                                    <option value="Beatriz Medina">Beatriz Medina</option>
+                                    <option value="Bruno Lopes">Bruno Lopes</option>
+                                    <option value="David Oliveira">David Oliveira</option>
+                                    <option value="Gustavo Watanabe">Gustavo Watanabe</option>
+                                    <option value="Neilyane Silva">Neilyane Silva</option>
+                                    <option value="Thiago Vieira">Thiago Vieira</option>
+                                </select></p>
+                            </div>
                             <div class="container-quantidade">
                                 <input type="hidden" asp-for="Produto.Estoque">
                             </div>
-                         </div>
-                    <div class="container-tamanhos">
-                        <label asp-for="Produto.Fornecedor">Fornecedor</label>
-                       <p> <input  class="input-estoque" asp-for="Produto.Fornecedor"> </p>
-                    </div>
-                    <div class="container-tamanhos">
-                        <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
-                        <p><select class="input-estoque" asp-for="Produto.Usuario_alt" >
-                            <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
-                            <option value="Beatriz Medina">Beatriz Medina</option>
-                            <option value="Bruno Lopes">Bruno Lopes</option>
-                            <option value="David Oliveira">David Oliveira</option>
-                            <option value="Gustavo Watanabe">Gustavo Watanabe</option>
-                            <option value="Neilyane Silva">Neilyane Silva</option>
-                            <option value="Thiago Vieira">Thiago Vieira</option>
-                        </select></p>
-                    </div>
+                        </div>   
                 </div>
             </div>
         </section>

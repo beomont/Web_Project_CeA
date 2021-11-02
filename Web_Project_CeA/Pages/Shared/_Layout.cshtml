@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/css/styles.css">
     <link rel="stylesheet" href="~/css/produtos.css">
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/login.js" asp-append-version="true" defer ></script>
+    <script src="~/js/getUser.js" asp-append-version="true" defer ></script>
 </head>
 <body>
     <header>
@@ -21,7 +23,9 @@
                 <img src="~/img/icon.svg" alt="icon" />
                 <div>
                     <span>Bem-vinda(o)</span>
+                    <p id="userName"></p>
                 </div>
+            <a href="~/" id="logoff"><img src="~/img/log-out.svg" alt="logout" class="logout-icon" /></a>
             </div>
         </div>
     </header>

@@ -1,87 +1,88 @@
 ﻿@page
 @model Web_Project_CeA.Pages.Produtos.EditEstoqueModel
 @{
+    ViewData["Title"] = "Editar";
 }
 
 <main>
     <div class="breadcrumb">
         <a asp-page="/Produtos/Index"><span>Home</span></a>
         <span>>></span>
-        <a asp-page="/Produtos/Detail" asp-route-id="@Model.Produto.Id"><span>Detalhe do produto</span></a>
-        <span>>></span>
-        <span>Editar produto</span>
+        <span>Editar estoque</span>
     </div>
     <form method="post">
         <input type="hidden" asp-for="Produto.Id" />
         <section class="container-produto">
             <div class="produto-info">
                 <div class="img-produto">
-                        <input type="hidden" asp-for="Produto.Imagem" />
-                        <img src="@Html.DisplayFor(model=> Model.Produto.Imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.Nome)" />
-                        <div class="btn-details editar">
-                            <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
-                            <input type="submit" value="alterar" class="btn secondary" />
-                        </div>
-            </div>
-            <div class="produto">
-                <div class="produto-details">
-                    <input type="hidden" asp-for="Produto.Nome" />
-                    <input type="hidden" asp-for="Produto.Descricao" />
-                    <h3>@Html.DisplayFor(model => Model.Produto.Nome)</h3>
-                    <p>@Html.DisplayFor(model => Model.Produto.Descricao)</p>
-                </div>
-                <div class="departamento-categoria">
-                    <div class="detalhe-categoria-info">
-                        <input type="hidden" asp-for="Produto.Divisao" />
-                        <label asp-for="Produto.Divisao">Departamento</label>
-                        <p>@Html.DisplayFor(model => Model.Produto.Divisao)</p>
-                    </div>
-                    <div class="categoria-info">
-                        <label asp-for="Produto.Categoria">Categoria</label>
-                        <input type="hidden" asp-for="Produto.Categoria" />
-                        <p>@Html.DisplayFor(model => Model.Produto.Categoria)</p>
-                    </div>
-                </div>
-                <div class="departamento-categoria">
-                    <div class="detalhe-categoria-info">
-                        <label asp-for="Produto.Tamanho">Tamanho</label>
-                        <input type="hidden" asp-for="Produto.Tamanho" />
-                        <p>@Html.DisplayFor(model => Model.Produto.Tamanho)</p>
-                    </div>
-                    <div class="categoria-info">
-                        <label asp-for="Produto.Fornecedor">Fornecedor</label>
-                        <input type="hidden" asp-for="Produto.Fornecedor">
-                        <p>@Html.DisplayFor(model => Model.Produto.Fornecedor)</p>
-                    </div>
-                </div>
-
-            <div class="estoque">
-                <h3>Estoque</h3>
-                <div class="container-estoque">
-                    <div class="container-quantidade">
-                        <label asp-for="Produto.Estoque">Novo Estoque</label>
-                        <input  class="input-estoque" asp-for="Produto.Estoque">
+                    <input type="hidden" asp-for="Produto.Imagem" />
+                    <img src="@Html.DisplayFor(model=> Model.Produto.Imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.Nome)" />
+                    <div class="btn-details editar">
+                        <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
+                        <input type="submit" value="alterar" class="btn secondary" />
                     </div>
                 </div>
                 
-                <div class="container-tamanhos">
-                    <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
-                    <p>
-                        <select class="input-estoque" asp-for="Produto.Usuario_alt">
-                            <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
-                            <option value="Beatriz Medina">Beatriz Medina</option>
-                            <option value="Bruno Lopes">Bruno Lopes</option>
-                            <option value="David Oliveira">David Oliveira</option>
-                            <option value="Gustavo Watanabe">Gustavo Watanabe</option>
-                            <option value="Neilyane Silva">Neilyane Silva</option>
-                            <option value="Thiago Vieira">Thiago Vieira</option>
-                        </select>
-                    </p>
+                <div class="produto">
+                    <div class="produto-details">
+                        <input type="hidden" asp-for="Produto.Nome" />
+                        <input type="hidden" asp-for="Produto.Descricao" />
+                        <h3>@Html.DisplayFor(model => Model.Produto.Nome)</h3>
+                        <p>@Html.DisplayFor(model => Model.Produto.Descricao)</p>
+                    </div>
+                    <div class="departamento-categoria">
+                        <div class="departamento-info">
+                            <input type="hidden" asp-for="Produto.Divisao" />
+                            <label asp-for="Produto.Divisao">Departamento</label>
+                            <p>@Html.DisplayFor(model => Model.Produto.Divisao)</p>
+                        </div>
+                        <div class="categoria-info">
+                            <label asp-for="Produto.Categoria">Categoria</label>
+                            <input type="hidden" asp-for="Produto.Categoria" />
+                            <p>@Html.DisplayFor(model => Model.Produto.Categoria)</p>
+                        </div>
+                    </div>
+                    <div class="departamento-categoria">
+                        <div class="departamento-info">
+                            <label asp-for="Produto.Tamanho">Tamanho</label>
+                            <input type="hidden" asp-for="Produto.Tamanho" />
+                            <p>@Html.DisplayFor(model => Model.Produto.Tamanho)</p>
+                        </div>
+                        <div class="categoria-info">
+                            <label asp-for="Produto.Fornecedor">Fornecedor</label>
+                            <input type="hidden" asp-for="Produto.Fornecedor">
+                            <p>@Html.DisplayFor(model => Model.Produto.Fornecedor)</p>
+                        </div>
+                    </div>
+               
+                    <div class="estoque">
+                        <h3>Estoque</h3>
+                        <div class="container-estoque">
+                            <div class="container-tamanhos">
+                                <label asp-for="Produto.Estoque">Novo Estoque</label>
+                                <input  class="input-estoque" asp-for="Produto.Estoque">
+                            </div>
+                            <div class="container-quantidade">
+                                <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
+                                <p>
+                                    <select class="input-estoque" asp-for="Produto.Usuario_alt">
+                                        <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
+                                        <option value="Beatriz Medina">Beatriz Medina</option>
+                                        <option value="Bruno Lopes">Bruno Lopes</option>
+                                        <option value="David Oliveira">David Oliveira</option>
+                                        <option value="Gustavo Watanabe">Gustavo Watanabe</option>
+                                        <option value="Neilyane Silva">Neilyane Silva</option>
+                                        <option value="Thiago Vieira">Thiago Vieira</option>
+                                    </select>
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-            </div>
-                    </div>
         </section>
+
         <section>
             <div class="movimentacoes">
                 <h3>Última Alteração</h3>

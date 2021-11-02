@@ -16,13 +16,13 @@
         <section class="container-produto">
             <div class="produto-info">
                 <div class="img-produto">
-                    <input type="hidden" asp-for="Produto.Imagem">
-                    <img src="@Html.DisplayFor(model=> Model.Produto.Imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.Nome)">
-                    <div class="btn-details editar">
-                        <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
-                        <input type="submit" value="alterar" class="btn secondary" />
-                    </div>
-                </div>
+                        <input type="hidden" asp-for="Produto.Imagem">
+                        <img src="@Html.DisplayFor(model=> Model.Produto.Imagem)" alt="Imagem do produto @Html.DisplayFor(model => Model.Produto.Nome)">
+                        <div class="btn-details editar">
+                            <input type="button" value="voltar" class="btn secondary" onClick="history.go(-1)">
+                            <input type="submit" value="alterar" class="btn secondary" />
+                        </div>
+</div>
                 <div class="produto">
                     <div class="produto-details">
                         <input type="hidden" asp-for="Produto.Nome" />
@@ -48,33 +48,32 @@
                         <h4>@Html.DisplayFor(model => Model.Produto.Fornecedor)</h4>
                     </div>
                 </div>
-            </div>
-            <div class="produto-info">
-                <div class="estoque">
-                    <h3>Estoque</h3>
-                    <div class="container-estoque">
-                        <div class="container-quantidade">
-                            <label asp-for="Produto.Estoque">Novo Estoque</label>
-                            <input class="input-estoque" asp-for="Produto.Estoque">
+                    </div>
+                        <div class="estoque">
+                            <h3>Estoque</h3>
+                            <div class="container-estoque">
+                                <div class="container-quantidade">
+                                    <label asp-for="Produto.Estoque">Novo Estoque</label>
+                                    <input  class="input-estoque" asp-for="Produto.Estoque">
+                                </div>
+                            </div>
+                           
+                            <div class="container-tamanhos">
+                                <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
+                                <p>
+                                    <select class="input-estoque" asp-for="Produto.Usuario_alt">
+                                        <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
+                                        <option value="Beatriz Medina">Beatriz Medina</option>
+                                        <option value="Bruno Lopes">Bruno Lopes</option>
+                                        <option value="David Oliveira">David Oliveira</option>
+                                        <option value="Gustavo Watanabe">Gustavo Watanabe</option>
+                                        <option value="Neilyane Silva">Neilyane Silva</option>
+                                        <option value="Thiago Vieira">Thiago Vieira</option>
+                                    </select>
+                                </p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="container-tamanhos">
-                        <label asp-for="Produto.Usuario_alt">Usuário de Alteração</label>
-                        <p>
-                            <select class="input-estoque" asp-for="Produto.Usuario_alt">
-                                <option value="@Html.DisplayFor(model=> Model.Produto.Usuario_alt)"></option>
-                                <option value="Beatriz Medina">Beatriz Medina</option>
-                                <option value="Bruno Lopes">Bruno Lopes</option>
-                                <option value="David Oliveira">David Oliveira</option>
-                                <option value="Gustavo Watanabe">Gustavo Watanabe</option>
-                                <option value="Neilyane Silva">Neilyane Silva</option>
-                                <option value="Thiago Vieira">Thiago Vieira</option>
-                            </select>
-                        </p>
-                    </div>
-                </div>
-            </div>
         </section>
         <section>
             <div class="movimentacoes">

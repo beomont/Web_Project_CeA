@@ -60,9 +60,31 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 
 <p>Objetivo: Direcionar o usuário para uma página de comunicação de erro caso algo dê errado.</p>
 
+<h3>Melhorias à implementar</>
+    
+ <h3> Tratamento de banco de dados - Não exclusão </h3>
 
+<p>Objetivo: Desenvolver funcionalidade que garanta a não exclusão de itens do banco de dados, a fim de obter histórico. Inserir um campo de flag para identificar itens ATIVOS e DESCONTINUADOS</p>   
 
-<img src="https://github.com/davids182/ProjetoC-A_photos/blob/c1004dcf673336287ac4b4d44ba16b34f7870f67/Controle%20de%20perman%C3%AAncia%20em%20estoque.png" alt="Controle de permanência"  height="500" width="700">
+ <h3>Página de erros interativa</h3>
+
+<p>Objetivo: Informar o usuário o motivo do erro apresentado (Substituir as condicionais por TRY / CATCH de modo que seja possível identificar erro e gerar tratativa para melhor informação do usuário)</p>   
+
+<h3> Inclusão de filtro para consulta de produtos por departamento/categoria</h3>
+
+<p>Objetivo: Melhorar a experiência do usuário, possibilitando a realização de consultas mais direcionadas dos itens em estoque.</p>   
+
+<h3> Registros de usuário</h3>
+
+<p>Objetivo: Definir o usuário loggado  como o usuário de cadastro e edição dos produtos automaticamente, de modo a garantir que apenas o dono do login tenha acesso a alterações com o seu username.</p>  
+
+<h3> Desenvolvimento de relatórios de entradas e saídas</h3>
+
+<p>Objetivo: Objetivo: Analisar o comportamento das entradas e saídas para que com base no histórico seja possível realizar projeções de demanda, avaliar o nível de cobertura do estoque atual e determinar o momento exato de realizar compras de reposição de estoque, possibilitando um melhor planejamento da loja.
+*Habilitar filtro no cabeçalho</p>  
+<img src="https://github.com/davids182/ProjetoC-A_photos/blob/c1004dcf673336287ac4b4d44ba16b34f7870f67/Registros%20de%20Entradas%20e%20Sa%C3%ADdas.png" alt="image"   height="500" width="700">
+
+<img src="https://github.com/davids182/ProjetoC-A_photos/blob/c1004dcf673336287ac4b4d44ba16b34f7870f67/Controle%20de%20perman%C3%AAncia%20em%20estoque.png" alt="image"  height="500" width="700">
 
 <p>Desenvolvido por:
 NewDevs-C&A (Beatriz Medina, Bruno Lopes, David de Oliveira, Gustavo Yuji Watanabe, Neilyane Silva, Thiago Vieira)</p>

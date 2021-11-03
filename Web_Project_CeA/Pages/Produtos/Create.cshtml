@@ -35,7 +35,7 @@
                         <div class="departamento-categoria">
                             <div class="departamento-info">
                                 <label for="Divisao">Departamento</label>
-                                <select class="form-control" id="divisao" name="divisao" onChange="validateSelect(this)" required>
+                                <select class="form-control" id="divisao" name="divisao" onBlur="validateSelect(this)" required>
                                     <option value="" selected>Selecione uma opção</option>
                                     <option value="Feminino">Feminino</option>
                                     <option value="Masculino">Masculino</option>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="categoria-info">
                                 <label for="Categoria">Categoria</label>
-                                <select id="categoria" name="categoria" onChange="validateSelect(this)" required>
+                                <select id="categoria" name="categoria" onBlur="validateSelect(this)" required>
                                     <option value="" selected>Selecione uma opção</option>
                                     <option value="Top">Top</option>
                                     <option value="Bottom">Bottom</option>
@@ -60,7 +60,7 @@
                             <div class="container-estoque">
                                 <div class="container-tamanhos">
                                     <label for="Tamanho">Tamanhos</label>
-                                    <select id="tamanho" name="tamanho" onChange="validateSelect(this)" required>
+                                    <select id="tamanho" name="tamanho" onBlur="validateSelect(this)" required>
                                         <option value="" selected>Selecione uma opção</option>
                                         <option value="PP">PP </option>
                                         <option value="P">P</option>
@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="container-quantidade">
                                     <label for="Usuario_alt"> Usuário do Cadastro</label>
-                                    <select id="usuario_alt" name="usuario_alt" onChange="validateSelect(this)" required>
+                                    <select id="usuario_alt" name="usuario_alt" onBlur="validateSelect(this)" required>
                                         <option value="" selected>Selecione uma opção</option>
                                         <option value="Beatriz Medina">Beatriz Medina</option>
                                         <option value="Bruno Lopes">Bruno Lopes</option>

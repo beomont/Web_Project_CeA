@@ -38,5 +38,33 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 - [x] Alterar quantidade do produto
 - [x] Exclusão do produto
 
+<h2> Oportunidades de melhoria </h2>
+
+<p>Etapa realizada para o mapeamento de melhorias, tanto de novas funcionalidades, como melhorias identificadas no decorrer do projeto para correção de bugs.</p>
+
+<h3>Melhorias Implementadas</>
+    
+<h3> Página de produtos </h3>
+
+<p>Objetivo: Inclusão da informação dos tamanhos na tela de Controle de estoque, total de itens cadastrados e total de peças em estoque para disponibilizar ao usuário uma visão mais completa do estoque atual.</p>
+
+<h3> Separar página de edição </h3>
+
+<p>Objetivo: Melhorar a organização das etapas de edição, desmembrando as alterações entre edição de características do produto e edição da quantidade em estoque.</p>
+
+<h3> Aplicação de normas de convenção </h3>
+
+<p>Objetivo: Refatorar o código utilizando normas para criação de nomenclaturas para classes, métodos e objetos (correção de grafia padrão para classe produto, correção de annotations, correção de nomes de campos para as páginas do CRUD, correção de Migrations na API.</p>
+
+<h3> Página de erros </h3>
+
+<p>Objetivo: Direcionar o usuário para uma página de comunicação de erro caso algo dê errado.</p>
+
+
+
+<img src="https://github.com/davids182/ProjetoC-A_photos/blob/c1004dcf673336287ac4b4d44ba16b34f7870f67/Controle%20de%20perman%C3%AAncia%20em%20estoque.png" alt="Controle de permanência"  height="500" width="700">
+
 <p>Desenvolvido por:
 NewDevs-C&A (Beatriz Medina, Bruno Lopes, David de Oliveira, Gustavo Yuji Watanabe, Neilyane Silva, Thiago Vieira)</p>
+
+

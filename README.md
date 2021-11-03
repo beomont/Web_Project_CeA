@@ -6,7 +6,7 @@
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/f3fd89f76f05d20f9ca6077d99ba17ccfa7fc71b/Fluxograma_do_Sistema_v2.png" alt="Diagrama de descrição do projeto">
 
 # Descrição do front end🖌
-O Front End do projeto foi baseado no layout criado através do Figma, pensando em um visual minimalista e clean com semelhanças próprias do site da C&A.
+O Front End do projeto foi baseado no layout criado através do Figma, pensando em um visual minimalista e clean, inspirado no site da C&A.
 
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/figmascreen.png" alt="Diagrama de descrição do projeto">
 

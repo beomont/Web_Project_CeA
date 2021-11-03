@@ -42,7 +42,7 @@ O CSS foi utilizado de forma pura, com criações de variáveis CSS para deixar 
 
 <p>Etapa realizada para o mapeamento de melhorias, tanto de novas funcionalidades, como melhorias identificadas no decorrer do projeto para correção de bugs.</p>
 
-<h3>Melhorias Implementadas ✅</>
+<h3>✅ Melhorias Implementadas ✅</>
     
 <h3> Página de produtos </h3>
 
@@ -60,7 +60,7 @@ O CSS foi utilizado de forma pura, com criações de variáveis CSS para deixar 
 
 <p>Objetivo: Direcionar o usuário para uma página de comunicação de erro caso algo dê errado.</p>
 
-<h3>Melhorias à implementar 🚧</>
+<h3>🚧 Melhorias à implementar 🚧</>
     
  <h3> Tratamento de banco de dados - Não exclusão </h3>
 
@@ -112,8 +112,8 @@ O CSS foi utilizado de forma pura, com criações de variáveis CSS para deixar 
 
 <p>Objetivo: Facilitar a identificação de erros através da repetição e da simulação de cenários específicos, minimizando os problemas da abordagem manual, o tempo dedicado e consequentemente o custo do desenvolvimento.</p>  
 
-<p>Desenvolvido por:
-NewDevs-C&A (Beatriz Medina, Bruno Lopes, David de Oliveira, Gustavo Yuji Watanabe, Neilyane Silva, Thiago Vieira)</p>
+<h3>🚀Projeto desenvolvido por: 🚀</h3>
+<p>NewDevs-C&A (Beatriz Medina, Bruno Lopes, David de Oliveira, Gustavo Yuji Watanabe, Neilyane Silva, Thiago Vieira)</p>
 
 
 

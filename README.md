@@ -10,10 +10,10 @@ O Front End do projeto foi baseado no layout criado através do Figma, pensando 
 
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/figmascreen.png" alt="Diagrama de descrição do projeto">
 
-Na criação do CSS, foi utilizado de forma pura com criações de variáveis CSS para deixar a criação de estilos de uma forma intuitiva e reduzir o código com CSS desnecessários.
+O CSS foi utilizado de forma pura, com criações de variáveis CSS para deixar a criação de estilos de uma forma intuitiva, de modo a melhorar a qualidade do código e evitar a a repetição desnecessária de tags.
 
 <div align="start">
-    <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/cssvariablesprint.png" alt="Pequeno bloco de variaveis css">
+    <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/cssvariablesprint.png" alt="Pequeno bloco de variaveis css" height="500" width="500">
     <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/cssvariablesprintbtn.png" alt="Pequeno bloco de variaveis css">
 </div>
 
@@ -42,7 +42,7 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 
 <p>Etapa realizada para o mapeamento de melhorias, tanto de novas funcionalidades, como melhorias identificadas no decorrer do projeto para correção de bugs.</p>
 
-<h3>Melhorias Implementadas</>
+<h3>Melhorias Implementadas ✅</>
     
 <h3> Página de produtos </h3>
 
@@ -60,7 +60,7 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 
 <p>Objetivo: Direcionar o usuário para uma página de comunicação de erro caso algo dê errado.</p>
 
-<h3>Melhorias à implementar</>
+<h3>Melhorias à implementar 🚧</>
     
  <h3> Tratamento de banco de dados - Não exclusão </h3>
 

@@ -38,5 +38,5 @@ Na criação do CSS, foi utilizado de forma pura com criações de variáveis CS
 - [x] Alterar quantidade do produto
 - [x] Exclusão do produto
 
-Desenvolvido por:
-NewDevs-C&A (Beatriz Medina, Bruno Lopes, David de Oliveira, Gustavo Yuji Watanabe, Neilyane Silva, Thiago Vieira)
+<p>Desenvolvido por:
+NewDevs-C&A (Beatriz Medina, Bruno Lopes, David de Oliveira, Gustavo Yuji Watanabe, Neilyane Silva, Thiago Vieira)</p>

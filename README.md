@@ -2,11 +2,11 @@
 
 <h2> Descrição do projeto💻 </h2>
 
-<p>Pensando em trazer uma vivência mais próxima da realidade do dia a dia do programador, vamos construir um gerenciador de estoques simples para uma loja de roupas. A aplicação deve possuir uma visualização da quantidade de cada produto em estoque, o cadastro, edição de cada produto e a possibilidade de adicionar ou subtrair a quantidade de itens disponíveis.</p>
+<p>Pensando em trazer uma vivência mais próxima da realidade do dia a dia do programador, construímos um gerenciador de estoques para uma loja de roupas. A aplicação possui funcionalidades para visualização da quantidade produtos em estoque, realização de cadastros, edição de produtos e a possibilidade de adicionar ou subtrair a quantidade de itens disponíveis em estoque.</p>
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/f3fd89f76f05d20f9ca6077d99ba17ccfa7fc71b/Fluxograma_do_Sistema_v2.png" alt="Diagrama de descrição do projeto">
 
 # Descrição do front end🖌
-O Front End do projeto foi baseado com o layout criado no Figma, pensando em um visual minimalista e clean com semelhanças próprias do site da C&A.
+O Front End do projeto foi baseado no layout criado através do Figma, pensando em um visual minimalista e clean com semelhanças próprias do site da C&A.
 
 <img src="https://github.com/davids182/ProjetoC-A_photos/blob/87c783c586c6172219b6eee49802d8cd0fd48a17/figmascreen.png" alt="Diagrama de descrição do projeto">
 
